@@ -15,12 +15,13 @@
   font-display: swap;
 }
 :root {
-  --color-fond: #f8f6f1;
-  --color-texte: #242424;
-  --color-texte-secondaire: #575f59;
-  --color-accent: #24543b;
-  --color-surface: #fffdf8;
-  --color-viewer: #e7e9e3;
+  --color-fond: #1a2214;
+  --color-texte: #eee0d8;
+  --color-texte-secondaire: #d4c0b4;
+  --color-accent: #c89060;
+  --color-accent-clair: #f2ddd6;
+  --color-surface: #2c3923;
+  --color-viewer: #354528;
   --espace-s: 0.5rem;
   --espace-m: 1rem;
   --espace-l: 1.5rem;
@@ -90,8 +91,8 @@ body > header {
     var(--espace-m),
     calc((100% - 72rem) / 2 + var(--espace-m))
   );
-  color: var(--color-fond);
-  background-color: var(--color-accent);
+  color: var(--color-texte);
+  background-color: var(--color-surface);
 }
 
 body > nav,
@@ -113,7 +114,7 @@ nav {
   padding-block: var(--espace-m);
   margin-bottom: var(--espace-m);
   background-color: var(--color-fond);
-  border-bottom: 1px solid rgb(36 36 36 / 18%);
+  border-bottom: 1px solid rgb(238 224 216 / 18%);
 }
 
 nav a {
@@ -139,6 +140,7 @@ section {
 
 section > h3 {
   margin-bottom: var(--espace-m);
+  color: var(--color-accent);
 }
 
 .carte-plat {
@@ -146,7 +148,7 @@ section > h3 {
   gap: var(--espace-m);
   padding: var(--espace-l);
   background-color: var(--color-surface);
-  border: 1px solid rgb(36 36 36 / 18%);
+  border: 1px solid rgb(200 144 96 / 25%);
   border-radius: 0.4rem;
 }
 
@@ -158,9 +160,11 @@ section > h3 {
   gap: var(--espace-s);
 }
 
+
+
 .prix {
   flex: 0 0 auto;
-  color: var(--color-accent);
+  color: var(--color-accent-clair);
   font-weight: 700;
   text-align: right;
   white-space: nowrap;
@@ -183,7 +187,7 @@ model-viewer {
 
 footer {
   padding-block: var(--espace-l) var(--espace-xl);
-  border-top: 1px solid rgb(36 36 36 / 18%);
+  border-top: 1px solid rgb(238 224 216 / 18%);
 }
 
 address {
