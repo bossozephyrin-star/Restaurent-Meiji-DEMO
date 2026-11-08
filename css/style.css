@@ -1,19 +1,19 @@
 @font-face {
   font-family: "Cormorant Garamond";
-  src: url("../assets/fonts/cormorant-garamond-latin-400-normal.woff2")
-    format("woff2");
+  src: url("../assets/fonts/cormorant-garamond-latin-400-normal.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Cormorant Garamond";
-  src: url("../assets/fonts/cormorant-garamond-latin-700-normal.woff")
-    format("woff");
+  src: url("../assets/fonts/cormorant-garamond-latin-700-normal.woff") format("woff");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
 }
+
 :root {
   --color-fond: #1a2214;
   --color-texte: #eee0d8;
@@ -60,23 +60,20 @@ h4 {
 
 h1 {
   font-size: clamp(2.25rem, 5vw, 3.6rem);
-  font-weight: 700;
   letter-spacing: 0.015em;
 }
 
 h2 {
   font-size: clamp(1.8rem, 3vw, 2.4rem);
-  font-weight: 600;
 }
 
 h3 {
   font-size: clamp(1.5rem, 2.5vw, 2rem);
-  font-weight: 600;
 }
 
 h4 {
+  min-width: 0;
   font-size: clamp(1.2rem, 1.8vw, 1.5rem);
-  font-weight: 600;
 }
 
 ul {
@@ -87,15 +84,16 @@ body > header {
   width: 100%;
   margin: 0;
   padding-block: clamp(3.25rem, 7vw, 5rem);
-  padding-inline: max(
-    var(--espace-m),
-    calc((100% - 72rem) / 2 + var(--espace-m))
-  );
+  padding-inline: max(var(--espace-m), calc((100% - 72rem) / 2 + var(--espace-m)));
   color: var(--color-texte);
   background-color: var(--color-surface);
 }
 
-body > nav,
+body > nav {
+  width: 100%;
+  padding-inline: max(var(--espace-m), calc((100% - 72rem) / 2 + var(--espace-m)));
+}
+
 body > main,
 body > footer {
   width: min(72rem, 100%);
@@ -124,18 +122,17 @@ nav a {
 }
 
 main {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
-  gap: var(--espace-xl);
   padding-block: var(--espace-xl);
 }
 
 main > h2 {
-  grid-column: 1 / -1;
+  margin-bottom: var(--espace-xl);
 }
 
 section {
   min-width: 0;
+  margin-bottom: var(--espace-xl);
+  scroll-margin-top: 5rem;
 }
 
 section > h3 {
@@ -143,9 +140,17 @@ section > h3 {
   color: var(--color-accent);
 }
 
+.liste-cartes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  gap: var(--espace-l);
+}
+
 .carte-plat {
   display: grid;
+  align-content: start;
   gap: var(--espace-m);
+  min-width: 0;
   padding: var(--espace-l);
   background-color: var(--color-surface);
   border: 1px solid rgb(200 144 96 / 25%);
@@ -156,11 +161,12 @@ section > h3 {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: var(--espace-s);
 }
 
-
+.carte-plat__entete h4 {
+  flex: 1 1 auto;
+}
 
 .prix {
   flex: 0 0 auto;
@@ -195,6 +201,6 @@ address {
 }
 
 a:focus-visible {
-  outline: 3px solid var(--color-accent);
-  outline-offset: var(--espace-s);
+  outline: 3px solid var(--color-accent-clair);
+  outline-offset: 3px;
 }
