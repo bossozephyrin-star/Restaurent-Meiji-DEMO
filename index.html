@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meiji Sushi &amp; Grill</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Meiji Sushi &amp; Grill</h1>
+    </header>
+
+    <nav aria-label="Catégories du menu">
+      <a href="#sashimi">Sashimi</a>
+      <a href="#nigiri">Nigiri</a>
+      <a href="#maki">Maki</a>
+    </nav>
+
+    <main>
+      <h2>Notre menu</h2>
+
+      <section id="sashimi" aria-labelledby="titre-sashimi">
+        <h3 id="titre-sashimi">Sashimi</h3>
+        <article class="carte-plat">
+          <div class="carte-plat__entete">
+            <h4>Sashimi de saumon</h4>
+            <p class="prix">Prix à définir</p>
+          </div>
+          <p>Tranches de saumon servies simplement.</p>
+          <p class="ingredients-label"><strong>Ingrédients</strong></p>
+          <ul>
+            <li>Saumon</li>
+          </ul>
+          <model-viewer
+            src="./assets/models/sashimi.glb"
+            alt="Tranches de sashimi de saumon avec gingembre et wasabi"
+            camera-controls
+            touch-action="pan-y"
+            auto-rotate
+            loading="lazy"
+          ></model-viewer>
+        </article>
+      </section>
+
+      <section id="nigiri" aria-labelledby="titre-nigiri">
+        <h3 id="titre-nigiri">Nigiri</h3>
+        <article class="carte-plat">
+          <div class="carte-plat__entete">
+            <h4>Nigiri au thon</h4>
+            <p class="prix">Prix à définir</p>
+          </div>
+          <p>Thon posé sur une boule de riz vinaigré.</p>
+          <p class="ingredients-label"><strong>Ingrédients</strong></p>
+          <ul>
+            <li>Thon</li>
+            <li>Riz vinaigré</li>
+          </ul>
+          <model-viewer
+            src="./assets/models/nigiri.glb"
+            alt="Trois nigiri au thon sur une assiette"
+            camera-controls
+            touch-action="pan-y"
+            auto-rotate
+            loading="lazy"
+          ></model-viewer>
+        </article>
+      </section>
+
+      <section id="maki" aria-labelledby="titre-maki">
+        <h3 id="titre-maki">Maki</h3>
+        <article class="carte-plat">
+          <div class="carte-plat__entete">
+            <h4>Maki concombre et avocat</h4>
+            <p class="prix">Prix à définir</p>
+          </div>
+          <p>Riz et légumes roulés dans une feuille d’algue nori.</p>
+          <p class="ingredients-label"><strong>Ingrédients</strong></p>
+          <ul>
+            <li>Riz vinaigré</li>
+            <li>Concombre</li>
+            <li>Avocat</li>
+            <li>Algue nori</li>
+          </ul>
+          <model-viewer
+            src="./assets/models/maki.glb"
+            alt="Cinq makis au concombre et à l’avocat sur une assiette"
+            camera-controls
+            touch-action="pan-y"
+            auto-rotate
+            loading="lazy"
+          ></model-viewer>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <address>
+        Meiji Sushi &amp; Grill<br />
+        Adresse à renseigner<br />
+        Téléphone : à renseigner
+      </address>
+    </footer>
+  </body>
+</html>
