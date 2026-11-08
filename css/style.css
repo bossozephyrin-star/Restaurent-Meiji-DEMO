@@ -238,7 +238,7 @@ body > main {
   scroll-margin-top: 5rem;
 }
 
-.menu-content > h2 {
+.menu-content > h1 {
   margin-bottom: var(--espace-xl);
 }
 
@@ -247,7 +247,7 @@ body > main {
   scroll-margin-top: 5rem;
 }
 
-.menu-content section > h3 {
+.menu-content section > h2 {
   margin-bottom: var(--espace-m);
   color: var(--color-accent);
 }
@@ -276,7 +276,7 @@ body > main {
   gap: var(--espace-s);
 }
 
-.carte-plat__entete h4 {
+.carte-plat__entete h3 {
   min-width: 0;
   flex: 1 1 auto;
 }

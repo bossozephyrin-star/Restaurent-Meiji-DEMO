@@ -6,16 +6,15 @@
     <meta name="description" content="Meiji Sushi & Grill, restaurant japonais à Brazzaville. Découvrez notre menu." />
     <title>Meiji Sushi &amp; Grill | Sushi &amp; Grill</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <script type="module" src="./assets/js/model-viewer-4.4.0.min.js"></script>
   </head>
   <body>
     <header class="site-header">
-      <a class="site-logo" href="#accueil" aria-label="Meiji Sushi &amp; Grill, accueil">
+      <a class="site-logo" href="./index.html#accueil" aria-label="Meiji Sushi &amp; Grill, accueil">
         <img src="./assets/img/meiji-logo.png" alt="Meiji Sushi &amp; Grill" fetchpriority="high" />
       </a>
       <nav class="site-nav" aria-label="Navigation principale">
-        <a href="#accueil">Accueil</a>
-        <a href="#menu">Menu</a>
+        <a href="./index.html#accueil">Accueil</a>
+        <a href="./menu.html">Menu</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -41,86 +40,12 @@
           <h1 id="hero-title">MEIJI</h1>
           <p class="hero__subtitle">Sushi &amp; Grill</p>
           <div class="hero__actions">
-            <a class="hero__button hero__button--primary" href="#menu">Découvrir notre menu</a>
+            <a class="hero__button hero__button--primary" href="./menu.html">Découvrir notre menu</a>
             <a class="hero__button hero__button--secondary" href="#contact">Nous trouver</a>
           </div>
         </div>
       </section>
 
-      <nav class="menu-nav" aria-label="Catégories du menu">
-        <a href="#sashimi">Sashimi</a>
-        <a href="#nigiri">Nigiri</a>
-        <a href="#maki">Maki</a>
-      </nav>
-
-      <div class="menu-content" id="menu">
-        <h2>Notre menu</h2>
-        <section id="sashimi" aria-labelledby="titre-sashimi">
-          <h3 id="titre-sashimi">Sashimi</h3>
-          <div class="liste-cartes">
-            <article class="carte-plat">
-              <div class="carte-plat__entete">
-                <h4>Sashimi Saumon ou Tataki</h4>
-                <p class="prix">Prix à définir</p>
-              </div>
-              <p>Tranches finement préparées, servies avec gingembre et wasabi.</p>
-              <p class="ingredients">Saumon frais ou tataki</p>
-              <model-viewer
-                src="./assets/models/sashimi.glb"
-                alt="Tranches de sashimi de saumon avec gingembre et wasabi"
-                camera-controls
-                touch-action="pan-y"
-                auto-rotate
-                loading="lazy"
-              ></model-viewer>
-            </article>
-          </div>
-        </section>
-
-        <section id="nigiri" aria-labelledby="titre-nigiri">
-          <h3 id="titre-nigiri">Nigiri</h3>
-          <div class="liste-cartes">
-            <article class="carte-plat">
-              <div class="carte-plat__entete">
-                <h4>Nigiri Saumon ou Tataki</h4>
-                <p class="prix">Prix à définir</p>
-              </div>
-              <p>Deux pièces à déguster en une bouchée.</p>
-              <p class="ingredients">Saumon, riz vinaigré</p>
-              <model-viewer
-                src="./assets/models/nigiri.glb"
-                alt="Deux nigiri au saumon sur une assiette"
-                camera-controls
-                touch-action="pan-y"
-                auto-rotate
-                loading="lazy"
-              ></model-viewer>
-            </article>
-          </div>
-        </section>
-
-        <section id="maki" aria-labelledby="titre-maki">
-          <h3 id="titre-maki">Maki</h3>
-          <div class="liste-cartes">
-            <article class="carte-plat">
-              <div class="carte-plat__entete">
-                <h4>Maki Crevette</h4>
-                <p class="prix">Prix à définir</p>
-              </div>
-              <p>Quatre pièces roulées dans une feuille de nori.</p>
-              <p class="ingredients">Crevette, avocat, concombre</p>
-              <model-viewer
-                src="./assets/models/maki.glb"
-                alt="Quatre makis à la crevette, à l’avocat et au concombre"
-                camera-controls
-                touch-action="pan-y"
-                auto-rotate
-                loading="lazy"
-              ></model-viewer>
-            </article>
-          </div>
-        </section>
-      </div>
     </main>
 
     <footer class="site-footer" id="contact">
