@@ -234,6 +234,17 @@ body > main {
   text-underline-offset: 0.2em;
 }
 
+.menu-nav--secondaire {
+  position: static;
+  z-index: auto;
+  gap: var(--espace-m);
+  padding: var(--espace-s) 0;
+  overflow-x: auto;
+  border: 0;
+  background: transparent;
+  font-size: 0.9rem;
+}
+
 .menu-content {
   width: min(72rem, 100%);
   margin-inline: auto;
@@ -253,6 +264,22 @@ body > main {
 .menu-content section > h2 {
   margin-bottom: var(--espace-m);
   color: var(--color-accent);
+}
+
+.menu-content .categorie-menu {
+  margin-bottom: var(--espace-m);
+  scroll-margin-top: 5rem;
+}
+
+.categorie-menu > h3 {
+  margin-bottom: var(--espace-s);
+  color: var(--color-accent);
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+}
+
+.menu-note {
+  margin-bottom: var(--espace-l);
+  color: var(--color-texte-secondaire);
 }
 
 .liste-cartes {
