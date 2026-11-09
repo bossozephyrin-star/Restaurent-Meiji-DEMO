@@ -305,6 +305,11 @@ model-viewer {
   border-radius: 0.4rem;
 }
 
+.viewer-hint {
+  color: var(--color-texte-secondaire);
+  font-size: 0.85rem;
+}
+
 body > .site-footer {
   padding-block: var(--espace-xl);
   background-color: var(--color-accent);
@@ -329,6 +334,13 @@ body > .site-footer {
 
 .site-footer a {
   color: var(--color-fond);
+}
+
+.site-footer__notice {
+  margin-top: var(--espace-m);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
 }
 
 a:focus-visible {

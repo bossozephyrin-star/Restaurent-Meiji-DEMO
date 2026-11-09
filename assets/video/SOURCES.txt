@@ -4,3 +4,5 @@ Licence : https://www.pexels.com/legal-pages/license/
 Téléchargée localement pour le site Meiji Demo.
 
 Logo : extrait du site officiel https://menu-meiji.itech.cg/
+
+Vidéo optimisée localement avec FFmpeg : H.264, 1280 × 720, sans audio, CRF 27.
