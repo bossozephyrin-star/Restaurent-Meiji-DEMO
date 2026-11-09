@@ -1,22 +1,21 @@
-const viewers = document.querySelectorAll("model-viewer");
+document.querySelectorAll("[data-ouvrir-viewer]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const viewer = document.getElementById(button.getAttribute("aria-controls"));
+    const backButton = document.querySelector(`[data-fermer-viewer="${viewer.id}"]`);
 
-for (const viewer of viewers) {
-  viewer.addEventListener(
-    "load",
-    async () => {
-      try {
-        const preview = await viewer.toBlob({
-          mimeType: "image/webp",
-          qualityArgument: 0.88,
-          idealAspect: true,
-        });
-        viewer.poster = URL.createObjectURL(preview);
-        viewer.setAttribute("reveal", "manual");
-        viewer.showPoster();
-      } catch (error) {
-        console.warn("Aperçu du modèle 3D indisponible.", error);
-      }
-    },
-    { once: true },
-  );
-}
+    button.hidden = true;
+    viewer.hidden = false;
+    backButton.hidden = false;
+  });
+});
+
+document.querySelectorAll("[data-fermer-viewer]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const viewer = document.getElementById(button.dataset.fermerViewer);
+    const preview = document.querySelector(`[aria-controls="${viewer.id}"]`);
+
+    viewer.hidden = true;
+    button.hidden = true;
+    preview.hidden = false;
+  });
+});
