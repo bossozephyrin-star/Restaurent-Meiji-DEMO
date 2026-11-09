@@ -166,10 +166,10 @@ body > main {
 
 .hero h1 {
   color: var(--color-fond);
-  font-family: Arial, sans-serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: clamp(3.5rem, 10vw, 7.5rem);
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-weight: 400;
+  letter-spacing: 0.08em;
   line-height: 1;
 }
 
