@@ -1,171 +1,56 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Découvrez le menu de Meiji Sushi & Grill à Brazzaville." />
-    <meta name="robots" content="noindex, nofollow" />
-    <title>Notre menu | Meiji Sushi &amp; Grill</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <script type="module" src="./assets/js/model-viewer-4.4.0.min.js"></script>
-    <script type="module" src="./assets/js/menu-viewers.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explorez les rubriques Meiji Sushi & Grill.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>
+      Le menu | Meiji Sushi &amp; Grill
+    </title>
+    <link rel="stylesheet" href="./assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="site-logo" href="./index.html#accueil" aria-label="Meiji Sushi &amp; Grill, accueil">
-        <img src="./assets/img/meiji-logo.png" alt="Meiji Sushi &amp; Grill" fetchpriority="high" />
-      </a>
+      <a class="site-logo" href="./index.html" aria-label="Meiji Sushi &amp; Grill, accueil"><img src="./assets/img/meiji-logo.png" alt="Meiji Sushi &amp; Grill"></a>
       <nav class="site-nav" aria-label="Navigation principale">
-        <a href="./index.html#accueil">Accueil</a>
-        <a href="./menu.html" aria-current="page">Menu</a>
-        <a href="./index.html#contact">Contact</a>
+        <a href="./index.html">Accueil</a><a href="./menu.html" aria-current="page">Menu</a><a href="./index.html#contact">Contact</a>
       </nav>
     </header>
-
-    <nav class="menu-nav" aria-label="Rubriques principales du menu">
-      <a href="#mes-plats">Mes plats</a>
-      <a href="#boissons">Boissons</a>
-      <a href="#hookah">Hookah</a>
-      <a href="#avis">Avis</a>
-    </nav>
-
-    <main>
-      <div class="menu-content" id="menu">
-        <header class="menu-intro">
-          <p class="menu-eyebrow">Meiji Sushi &amp; Grill</p>
-          <h1>Notre menu</h1>
-          <p>Quelques incontournables à découvrir en image et en 3D.</p>
-        </header>
-
-        <section id="mes-plats" aria-labelledby="titre-mes-plats">
-          <h2 id="titre-mes-plats">Mes plats</h2>
-          <nav class="menu-nav menu-nav--secondaire" aria-label="Catégories de Mes plats">
-            <a href="#sashimi">Sashimi &amp; Shirashi</a>
-            <a href="#nigiri">Nigiri x 2</a>
-            <a href="#maki">Maki x 4</a>
-          </nav>
-
-          <div class="liste-cartes liste-cartes--plats">
-            <article class="carte-plat" id="sashimi" aria-labelledby="titre-sashimi">
-              <p class="carte-plat__categorie">Sashimi &amp; Shirashi</p>
-              <div class="carte-plat__entete">
-                <h3 id="titre-sashimi">Sashimi saumon ou tataki</h3>
-                <p class="prix">Prix à définir</p>
-              </div>
-              <p>Tranches fines, gingembre et wasabi.</p>
-              <p class="ingredients">Saumon frais ou tataki</p>
-              <button class="plat-apercu" type="button" aria-label="Voir le sashimi en 3D" aria-controls="viewer-sashimi" data-ouvrir-viewer>
-                <img src="./assets/img/plats/sashimi.jpg" alt="Tranches de sashimi de saumon sur une assiette" width="1200" height="800" loading="lazy" />
-                <span>Voir en 3D</span>
-              </button>
-              <model-viewer id="viewer-sashimi" src="./assets/models/sashimi.glb" alt="Tranches de sashimi de saumon sur une assiette avec gingembre et wasabi" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden></model-viewer>
-              <button class="viewer-retour" type="button" data-fermer-viewer="viewer-sashimi" hidden>Revoir la photo</button>
-            </article>
-
-            <article class="carte-plat" id="nigiri" aria-labelledby="titre-nigiri">
-              <p class="carte-plat__categorie">Nigiri x 2</p>
-              <div class="carte-plat__entete">
-                <h3 id="titre-nigiri">Nigiri saumon ou tataki</h3>
-                <p class="prix">Prix à définir</p>
-              </div>
-              <p>Deux pièces à déguster en une bouchée.</p>
-              <p class="ingredients">Saumon, riz vinaigré</p>
-              <button class="plat-apercu" type="button" aria-label="Voir les nigiri en 3D" aria-controls="viewer-nigiri" data-ouvrir-viewer>
-                <img src="./assets/img/plats/nigiri.jpg" alt="Nigiri au saumon servis sur une assiette" width="1200" height="1800" loading="lazy" />
-                <span>Voir en 3D</span>
-              </button>
-              <model-viewer id="viewer-nigiri" src="./assets/models/nigiri.glb" alt="Deux nigiri au saumon sur une assiette" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden></model-viewer>
-              <button class="viewer-retour" type="button" data-fermer-viewer="viewer-nigiri" hidden>Revoir la photo</button>
-            </article>
-
-            <article class="carte-plat" id="maki" aria-labelledby="titre-maki">
-              <p class="carte-plat__categorie">Maki x 4</p>
-              <div class="carte-plat__entete">
-                <h3 id="titre-maki">Maki crevette</h3>
-                <p class="prix">Prix à définir</p>
-              </div>
-              <p>Quatre pièces roulées dans une feuille de nori.</p>
-              <p class="ingredients">Crevette, avocat, concombre</p>
-              <button class="plat-apercu" type="button" aria-label="Voir les maki en 3D" aria-controls="viewer-maki" data-ouvrir-viewer>
-                <img src="./assets/img/plats/maki.jpg" alt="Rouleaux maki servis sur une assiette" width="1200" height="900" loading="lazy" />
-                <span>Voir en 3D</span>
-              </button>
-              <model-viewer id="viewer-maki" src="./assets/models/maki.glb" alt="Quatre makis à la crevette, à l’avocat et au concombre" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden></model-viewer>
-              <button class="viewer-retour" type="button" data-fermer-viewer="viewer-maki" hidden>Revoir la photo</button>
-            </article>
-          </div>
-        </section>
-
-        <section id="boissons" aria-labelledby="titre-boissons">
-          <h2 id="titre-boissons">Boissons</h2>
-          <p class="section-lead">Cocktails de démonstration. Les recettes et les noms restent à confirmer.</p>
-          <div class="liste-cartes liste-cartes--boissons">
-            <article class="carte-plat carte-boisson">
-              <button class="plat-apercu" type="button" aria-label="Voir le cocktail Soleil en 3D" aria-controls="viewer-cocktail-soleil" data-ouvrir-viewer>
-                <img src="./assets/img/boissons/cocktail-soleil.jpg" alt="Cocktail dégradé orange et rouge avec agrumes et menthe" width="720" height="1080" loading="lazy" />
-                <span>Voir en 3D</span>
-              </button>
-              <model-viewer id="viewer-cocktail-soleil" src="./assets/models/cocktail-soleil.glb" alt="Verre de cocktail aux agrumes en trois dimensions" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden></model-viewer>
-              <button class="viewer-retour" type="button" data-fermer-viewer="viewer-cocktail-soleil" hidden>Revoir la photo</button>
-              <div class="carte-plat__entete">
-                <h3>Cocktail Soleil</h3>
-                <p class="prix">Prix à définir</p>
-              </div>
-              <p class="ingredients">Visuel de démonstration, composition à confirmer.</p>
-            </article>
-
-            <article class="carte-plat carte-boisson">
-              <button class="plat-apercu" type="button" aria-label="Voir le cocktail Orange en 3D" aria-controls="viewer-cocktail-orange" data-ouvrir-viewer>
-                <img src="./assets/img/boissons/cocktail-orange.jpg" alt="Cocktail orange garni d’une rondelle d’orange et de menthe" width="720" height="1080" loading="lazy" />
-                <span>Voir en 3D</span>
-              </button>
-              <model-viewer id="viewer-cocktail-orange" src="./assets/models/cocktail-orange.glb" alt="Verre de cocktail à l’orange en trois dimensions" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden></model-viewer>
-              <button class="viewer-retour" type="button" data-fermer-viewer="viewer-cocktail-orange" hidden>Revoir la photo</button>
-              <div class="carte-plat__entete">
-                <h3>Cocktail Orange</h3>
-                <p class="prix">Prix à définir</p>
-              </div>
-              <p class="ingredients">Visuel de démonstration, composition à confirmer.</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="hookah" aria-labelledby="titre-hookah">
-          <h2 id="titre-hookah">Hookah</h2>
-          <p class="section-lead">Les produits sans photo ne sont pas présentés dans cette démo.</p>
-        </section>
-
-        <section id="avis" aria-labelledby="titre-avis">
-          <h2 id="titre-avis">Avis</h2>
-          <p class="section-lead">Exemples fictifs pour montrer la présentation des avis.</p>
-          <div class="liste-avis">
-            <article class="carte-avis">
-              <p class="carte-avis__texte">« Les plats étaient frais et la présentation très soignée. »</p>
-              <p class="carte-avis__auteur">Avis fictif de démonstration</p>
-            </article>
-            <article class="carte-avis">
-              <p class="carte-avis__texte">« Une belle découverte, avec des saveurs équilibrées. »</p>
-              <p class="carte-avis__auteur">Avis fictif de démonstration</p>
-            </article>
-            <article class="carte-avis">
-              <p class="carte-avis__texte">« Le cadre est agréable et l’accueil chaleureux. »</p>
-              <p class="carte-avis__auteur">Avis fictif de démonstration</p>
-            </article>
-          </div>
-        </section>
-      </div>
+    <main class="menu-home container">
+      <section class="menu-banner">
+        <p class="eyebrow">
+          Meiji Sushi &amp; Grill · Brazzaville
+        </p>
+        <h1>
+          Le menu
+        </h1>
+        <p>
+          Choisissez une rubrique pour découvrir notre sélection.
+        </p>
+        <p class="demo-note">
+          Démo non officielle
+        </p>
+      </section>
+      <nav class="category-grid row g-3" aria-label="Rubriques du menu">
+        <a class="category-card col-12 col-sm-6 col-xl-3" href="./plats.html"><img src="./assets/img/plats/sashimi.jpg" alt="Sashimi de saumon" loading="lazy"><span class="category-card__shade"></span><span class="category-card__content"><span class="category-card__index">01 / À LA CARTE</span><strong>Mes plats</strong><span>Entrées, salades, sushi et plus</span><span class="category-card__link">Explorer la carte ↗</span></span></a><a class="category-card col-12 col-sm-6 col-xl-3" href="./boissons.html"><img src="./assets/img/boissons/cocktail-soleil.jpg" alt="Cocktail aux agrumes" loading="lazy"><span class="category-card__shade"></span><span class="category-card__content"><span class="category-card__index">02 / AU COMPTOIR</span><strong>Boissons</strong><span>Cocktails de démonstration</span><span class="category-card__link">Voir les boissons ↗</span></span></a><a class="category-card category-card--hookah col-12 col-sm-6 col-xl-3" href="./hookah.html"><span class="category-card__content"><span class="category-card__index">03 / L’ESPACE LOUNGE</span><strong>Hookah</strong><span>La sélection sera ajoutée prochainement</span><span class="category-card__link">Découvrir ↗</span></span></a><a class="category-card category-card--avis col-12 col-sm-6 col-xl-3" href="./avis.html"><span class="category-card__rating" aria-hidden="true">★★★★★</span><span class="category-card__content"><span class="category-card__index">04 / VOS IMPRESSIONS</span><strong>Avis</strong><span>Exemples fictifs pour cette démo</span><span class="category-card__link">Lire les avis ↗</span></span></a>
+      </nav>
     </main>
-
-    <footer class="site-footer" id="contact">
+    <footer class="site-footer">
       <div class="site-footer__content">
-        <h2>Nous trouver</h2>
+        <h2>
+          Nous trouver
+        </h2>
         <address>
-          Meiji Sushi &amp; Grill<br />
-          Centre ville, vers la Cathédrale Sacré-Cœur<br />
-          Brazzaville
+          Meiji Sushi &amp; Grill<br>Centre ville, vers la Cathédrale Sacré-Cœur<br>Brazzaville
         </address>
-        <p><a href="tel:+242069387668">06.938.76.68</a></p>
-        <p class="site-footer__notice">Démo non officielle</p>
+        <p>
+          <a href="tel:+242069387668">06.938.76.68</a>
+        </p>
+        <p class="site-footer__notice">
+          Démo non officielle
+        </p>
       </div>
     </footer>
   </body>

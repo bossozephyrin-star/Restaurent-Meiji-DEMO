@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Découvrez les plats Meiji Sushi & Grill.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>
+      Mes plats | Meiji Sushi &amp; Grill
+    </title>
+    <link rel="stylesheet" href="./assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="./assets/js/model-viewer-4.4.0.min.js">
+    </script>
+    <script type="module" src="./assets/js/menu-viewers.js">
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-logo" href="./index.html" aria-label="Meiji Sushi &amp; Grill, accueil"><img src="./assets/img/meiji-logo.png" alt="Meiji Sushi &amp; Grill"></a>
+      <nav class="site-nav">
+        <a href="./index.html">Accueil</a><a href="./menu.html" aria-current="page">Menu</a><a href="./index.html#contact">Contact</a>
+      </nav>
+    </header>
+    <nav class="category-nav" aria-label="Rubriques du menu">
+      <a class="is-current" href="./plats.html" aria-current="page">Mes plats</a><a href="./boissons.html">Boissons</a><a href="./hookah.html">Hookah</a><a href="./avis.html">Avis</a>
+    </nav>
+    <main class="page-shell container">
+      <header class="page-heading page-heading--photo">
+        <p class="eyebrow">
+          À la carte
+        </p>
+        <h1>
+          Mes plats
+        </h1>
+        <p>
+          Quelques incontournables en photo et en 3D.
+        </p>
+      </header>
+      <nav class="subcat-nav" aria-label="Sous-catégories des plats">
+        <a href="#entrees">Entrées</a><a href="#nigiri">Nigiri</a><a href="#maki">Maki</a>
+      </nav>
+      <section class="menu-section" id="entrees">
+        <div class="section-heading">
+          <p class="eyebrow">
+            01 / Entrées
+          </p>
+          <h2>
+            Sashimi &amp; shirashi
+          </h2>
+        </div>
+        <div class="dish-grid row g-4">
+          <article class="dish-card col-12 col-lg-8">
+            <div class="dish-card__copy">
+              <p class="dish-card__kicker">
+                Sashimi
+              </p>
+              <div class="dish-card__title">
+                <h3>
+                  Sashimi saumon ou tataki
+                </h3>
+                <span class="price">Prix à définir</span>
+              </div>
+              <p>
+                Tranches fines, gingembre et wasabi.
+              </p>
+              <p class="ingredients">
+                Saumon frais ou tataki
+              </p>
+            </div>
+            <button class="dish-preview" type="button" aria-label="Voir le sashimi en 3D" aria-controls="viewer-sashimi" data-ouvrir-viewer>
+              <img src="./assets/img/plats/sashimi.jpg" alt="Tranches de sashimi de saumon" width="1200" height="800" loading="lazy"><span>Voir en 3D ↗</span>
+            </button>
+            <model-viewer id="viewer-sashimi" src="./assets/models/sashimi.glb" alt="Sashimi de saumon avec gingembre et wasabi" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden>
+            </model-viewer>
+            <button class="viewer-retour" type="button" data-fermer-viewer="viewer-sashimi" hidden>
+              Revoir la photo
+            </button>
+          </article>
+        </div>
+      </section>
+      <section class="menu-section" id="nigiri">
+        <div class="section-heading">
+          <p class="eyebrow">
+            02 / Sushi
+          </p>
+          <h2>
+            Nigiri
+          </h2>
+        </div>
+        <div class="dish-grid row g-4">
+          <article class="dish-card col-12 col-lg-8">
+            <div class="dish-card__copy">
+              <p class="dish-card__kicker">
+                Nigiri × 2
+              </p>
+              <div class="dish-card__title">
+                <h3>
+                  Nigiri saumon ou tataki
+                </h3>
+                <span class="price">Prix à définir</span>
+              </div>
+              <p>
+                Deux pièces à déguster en une bouchée.
+              </p>
+              <p class="ingredients">
+                Saumon, riz vinaigré
+              </p>
+            </div>
+            <button class="dish-preview" type="button" aria-label="Voir les nigiri en 3D" aria-controls="viewer-nigiri" data-ouvrir-viewer>
+              <img src="./assets/img/plats/nigiri.jpg" alt="Nigiri au saumon" width="1200" height="1800" loading="lazy"><span>Voir en 3D ↗</span>
+            </button>
+            <model-viewer id="viewer-nigiri" src="./assets/models/nigiri.glb" alt="Deux nigiri au saumon" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden>
+            </model-viewer>
+            <button class="viewer-retour" type="button" data-fermer-viewer="viewer-nigiri" hidden>
+              Revoir la photo
+            </button>
+          </article>
+        </div>
+      </section>
+      <section class="menu-section" id="maki">
+        <div class="section-heading">
+          <p class="eyebrow">
+            03 / Sushi
+          </p>
+          <h2>
+            Maki
+          </h2>
+        </div>
+        <div class="dish-grid row g-4">
+          <article class="dish-card col-12 col-lg-8">
+            <div class="dish-card__copy">
+              <p class="dish-card__kicker">
+                Maki × 4
+              </p>
+              <div class="dish-card__title">
+                <h3>
+                  Maki crevette
+                </h3>
+                <span class="price">Prix à définir</span>
+              </div>
+              <p>
+                Quatre pièces roulées dans une feuille de nori.
+              </p>
+              <p class="ingredients">
+                Crevette, avocat, concombre
+              </p>
+            </div>
+            <button class="dish-preview" type="button" aria-label="Voir les maki en 3D" aria-controls="viewer-maki" data-ouvrir-viewer>
+              <img src="./assets/img/plats/maki.jpg" alt="Maki servis sur une assiette" width="1200" height="900" loading="lazy"><span>Voir en 3D ↗</span>
+            </button>
+            <model-viewer id="viewer-maki" src="./assets/models/maki.glb" alt="Maki à la crevette, avocat et concombre" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden>
+            </model-viewer>
+            <button class="viewer-retour" type="button" data-fermer-viewer="viewer-maki" hidden>
+              Revoir la photo
+            </button>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__content">
+        <h2>
+          Nous trouver
+        </h2>
+        <address>
+          Meiji Sushi &amp; Grill<br>Centre ville, vers la Cathédrale Sacré-Cœur<br>Brazzaville
+        </address>
+        <p>
+          <a href="tel:+242069387668">06.938.76.68</a>
+        </p>
+        <p class="site-footer__notice">
+          Démo non officielle
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
