@@ -1,4 +1,11 @@
 @font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap
+}
+@font-face {
   font-family: "Cormorant Garamond";
   src: url("../assets/fonts/cormorant-garamond-latin-400-normal.woff2") format("woff2");
   font-style: normal;
@@ -13,14 +20,20 @@
   font-display: swap
 }
 :root {
-  --ink: #20241e;
-  --forest: #183c2d;
-  --forest-deep: #10291f;
-  --cream: #f5f0e6;
-  --paper: #fffdf8;
-  --muted: #68695f;
-  --copper: #bd754c;
-  --line: #ded7c9
+  --ink: #200a0b;
+  --burgundy: #5b1213;
+  --forest: #353d25;
+  --forest-deep: #200a0b;
+  --forest-night: #171e14;
+  --cream: #ead8cc;
+  --paper: #f6e8dc;
+  --sand: #e1c1a8;
+  --rose: #e8cbb8;
+  --muted: #6f554e;
+  --copper: #d36432;
+  --copper-dark: #8e3b1f;
+  --line: #c7a894;
+  --focus: #d36432
 }
 * {
   box-sizing: border-box
@@ -32,17 +45,18 @@ body {
   margin: 0;
   color: var(--ink);
   background-color: var(--cream);
-  background-image: radial-gradient(ellipse at 10% 20%,#d7c6aa 0,transparent 32%), radial-gradient(ellipse at 92% 80%,#b4c2a7 0,transparent 34%);
+  background-image: radial-gradient(ellipse at 10% 20%,rgb(225 193 168 / 58%) 0,transparent 34%), repeating-radial-gradient(ellipse at 50% 0%,transparent 0 9px,rgb(91 18 19 / 3%) 10px 11px,transparent 12px 23px);
+  background-size: auto, 84px 54px;
   background-attachment: fixed;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   line-height: 1.6
 }
 h1, h2, h3, p {
   margin: 0
 }
 h1, h2, h3 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-weight: 700;
+  font-family: "Wanoquin", "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
   line-height: 1.05
 }
 h1 {
@@ -59,7 +73,7 @@ a {
   color: inherit
 }
 a:focus-visible, button:focus-visible {
-  outline: 3px solid var(--copper);
+  outline: 3px solid var(--focus);
   outline-offset: 4px
 }
 .site-header {
@@ -94,7 +108,7 @@ a:focus-visible, button:focus-visible {
   text-decoration: none
 }
 .site-nav a:hover {
-  color: #e1c28d
+  color: var(--copper)
 }
 .category-nav {
   position: sticky;
@@ -104,9 +118,9 @@ a:focus-visible, button:focus-visible {
   gap: clamp(1.2rem,5vw,3rem);
   overflow-x: auto;
   padding: .9rem 1.1rem;
-  border-bottom: 1px solid rgb(24 60 45 / 16%);
-  background: rgb(255 253 248 / 96%);
-  box-shadow: 0 7px 20px rgb(32 36 30 / 6%);
+  border-bottom: 1px solid rgb(91 18 19 / 18%);
+  background: rgb(225 193 168 / 97%);
+  box-shadow: 0 7px 20px rgb(32 10 11 / 8%);
   scrollbar-width: thin
 }
 .category-nav a {
@@ -117,7 +131,7 @@ a:focus-visible, button:focus-visible {
   text-decoration: none
 }
 .category-nav a:hover, .category-nav a.is-current {
-  color: var(--copper);
+  color: var(--copper-dark);
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: .45em
@@ -154,17 +168,17 @@ a:focus-visible, button:focus-visible {
   z-index: -1;
   inset: 0;
   content: "";
-  background: linear-gradient(90deg,rgb(11 25 19 / 86%),rgb(11 25 19 / 30%))
+  background: linear-gradient(90deg,rgb(32 10 11 / 86%),rgb(32 10 11 / 30%))
 }
 .menu-banner h1, .page-heading h1 {
   margin-block: .3rem .65rem
 }
 .menu-banner>p:not(.eyebrow), .page-heading>p:not(.eyebrow) {
   max-width: 37rem;
-  color: #f0e9dc
+  color: var(--cream)
 }
 .eyebrow {
-  color: #dfbb83;
+  color: var(--sand);
   font-size: .74rem;
   font-weight: 700;
   letter-spacing: .2em;
@@ -175,7 +189,7 @@ a:focus-visible, button:focus-visible {
 }
 .demo-note {
   margin-top: 1rem;
-  color: #f0dfc4;
+  color: var(--cream);
   font-size: .78rem;
   letter-spacing: .04em
 }
@@ -206,7 +220,7 @@ a:focus-visible, button:focus-visible {
   position: absolute;
   z-index: -1;
   inset: 0;
-  background: linear-gradient(0deg,rgb(12 22 17 / 88%),rgb(12 22 17 / 4%) 82%)
+  background: linear-gradient(0deg,rgb(32 10 11 / 88%),rgb(32 10 11 / 8%) 82%)
 }
 .category-card__content {
   display: flex;
@@ -217,16 +231,17 @@ a:focus-visible, button:focus-visible {
 }
 .category-card__content strong {
   margin: .1rem 0;
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Wanoquin", "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
   font-size: 2.4rem;
   line-height: 1.05
 }
 .category-card__content>span:not(.category-card__index):not(.category-card__link) {
-  color: #eee8dc;
+  color: var(--cream);
   font-size: .9rem
 }
 .category-card__index {
-  color: #e6c694;
+  color: var(--sand);
   font-size: .68rem;
   font-weight: 700;
   letter-spacing: .17em
@@ -234,12 +249,12 @@ a:focus-visible, button:focus-visible {
 .category-card__link {
   margin-top: .9rem;
   padding-bottom: .2rem;
-  border-bottom: 1px solid #d8b97e;
+  border-bottom: 1px solid var(--sand);
   font-size: .82rem;
   font-weight: 700
 }
 .category-card--hookah {
-  background: radial-gradient(ellipse at 80% 15%,#956747,transparent 39%), linear-gradient(135deg,#1b4331,#10251e)
+  background: radial-gradient(ellipse at 80% 15%,rgb(211 100 50 / 25%),transparent 39%), repeating-radial-gradient(ellipse at 50% 0%,transparent 0 9px,rgb(234 216 204 / 6%) 10px 11px,transparent 12px 23px), linear-gradient(135deg,#353d25,#171e14)
 }
 .category-card--hookah:before {
   position: absolute;
@@ -248,18 +263,18 @@ a:focus-visible, button:focus-visible {
   bottom: -5.5rem;
   color: rgb(255 255 255 / 8%);
   content: "M";
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Wanoquin", "Cormorant Garamond", Georgia, serif;
   font-size: 24rem;
   line-height: 1
 }
 .category-card--avis {
-  background: linear-gradient(140deg,#7d503a,#402c25 70%)
+  background: linear-gradient(140deg,#5b1213,#200a0b 70%)
 }
 .category-card__rating {
   position: absolute;
   top: 1rem;
   right: 1.1rem;
-  color: #e3c17f;
+  color: var(--copper-dark);
   font-size: 1.5rem;
   letter-spacing: .18em
 }
@@ -275,10 +290,10 @@ a:focus-visible, button:focus-visible {
   background-position: center 75%
 }
 .page-heading--hookah {
-  background: radial-gradient(ellipse at 75% 20%,#8b654a,transparent 40%), linear-gradient(125deg,#173b2c,#10291f)
+  background: radial-gradient(ellipse at 75% 20%,rgb(211 100 50 / 22%),transparent 40%), repeating-radial-gradient(ellipse at 50% 0%,transparent 0 9px,rgb(234 216 204 / 6%) 10px 11px,transparent 12px 23px), linear-gradient(125deg,#353d25,#171e14)
 }
 .page-heading--hookah:after {
-  background: linear-gradient(90deg,rgb(11 25 19 / 42%),rgb(11 25 19 / 7%))
+  background: linear-gradient(90deg,rgb(32 10 11 / 48%),rgb(32 10 11 / 12%))
 }
 .subcat-nav {
   position: sticky;
@@ -288,7 +303,7 @@ a:focus-visible, button:focus-visible {
   gap: .65rem;
   overflow-x: auto;
   padding: .7rem 0;
-  background: rgb(245 240 230 / 96%)
+  background: rgb(234 216 204 / 97%)
 }
 .subcat-nav a {
   flex: 0 0 auto;
@@ -329,17 +344,17 @@ a:focus-visible, button:focus-visible {
 .dish-card {
   min-width: 0;
   overflow: hidden;
-  border: 1px solid rgb(57 62 49 / 15%);
+  border: 1px solid rgb(32 10 11 / 14%);
   border-radius: .7rem;
   background: var(--paper);
-  box-shadow: 0 10px 30px rgb(44 38 28 / 7%)
+  box-shadow: 0 10px 30px rgb(32 10 11 / 8%)
 }
 .dish-card__copy {
   padding: 1.1rem 1.15rem 1.25rem
 }
 .dish-card__kicker {
   margin-bottom: .45rem;
-  color: var(--copper);
+  color: var(--copper-dark);
   font-size: .68rem;
   font-weight: 700;
   letter-spacing: .15em;
@@ -361,7 +376,7 @@ a:focus-visible, button:focus-visible {
 }
 .price {
   flex: 0 0 auto;
-  color: var(--copper);
+  color: var(--copper-dark);
   font-size: .76rem;
   font-weight: 700;
   text-align: right
@@ -380,7 +395,7 @@ a:focus-visible, button:focus-visible {
   padding: 0;
   overflow: hidden;
   border: 0;
-  background: #ddd9cf;
+  background: var(--sand);
   cursor: pointer;
   text-align: left
 }
@@ -405,7 +420,7 @@ model-viewer {
   display: block;
   width: 100%;
   height: clamp(18rem,66vw,25rem);
-  background: #e8e8e0
+  background: var(--rose)
 }
 .viewer-retour {
   margin: .8rem 1rem 0;
@@ -426,14 +441,14 @@ model-viewer {
   border-left: 3px solid var(--copper);
   border-radius: .65rem;
   color: var(--paper);
-  background: linear-gradient(120deg,var(--forest),var(--forest-deep))
+  background: linear-gradient(120deg,var(--forest),var(--forest-night))
 }
 .editorial-panel h2 {
   margin: .3rem 0 .6rem
 }
 .editorial-panel>p:not(.eyebrow):not(.demo-note) {
   max-width: 42rem;
-  color: #eee8dc
+  color: var(--cream)
 }
 .review-grid {
   margin-top: 1.4rem
@@ -445,20 +460,20 @@ model-viewer {
   border-top: 3px solid var(--copper);
   border-radius: .65rem;
   background: var(--paper);
-  box-shadow: 0 12px 32px rgb(44 38 28 / 8%)
+  box-shadow: 0 12px 32px rgb(32 10 11 / 9%)
 }
 .review-stars {
   margin-bottom: .8rem;
-  color: #a86a20;
+  color: var(--copper-dark);
   font-size: 1.1rem;
   letter-spacing: .2em
 }
 .review-card blockquote {
   margin: 0;
   color: var(--forest-deep);
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Wanoquin", "Cormorant Garamond", Georgia, serif;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.3
 }
 .review-author {
@@ -497,7 +512,7 @@ model-viewer {
   color: var(--cream)
 }
 .site-footer__notice {
-  color: #d9c7a5;
+  color: var(--sand);
   font-size: .78rem
 }
 [hidden] {
@@ -544,7 +559,7 @@ model-viewer {
   }
 }
 @media(prefers-reduced-motion:reduce) {
-  *, *: : before, *: : after {
+  *, *::before, *::after {
     scroll-behavior: auto!important;
     transition-duration: .01ms!important
   }
@@ -558,7 +573,7 @@ model-viewer {
   place-items: center;
   overflow: hidden;
   color: var(--paper);
-  background: #121510 url("../assets/img/hero-sushi-poster.jpg") center/cover;
+  background: var(--forest-deep) url("../assets/img/hero-sushi-poster.jpg") center/cover;
   text-align: center
 }
 .hero__video, .hero__shade {
@@ -573,7 +588,7 @@ model-viewer {
 }
 .hero__shade {
   z-index: 0;
-  background: rgb(0 0 0 / 48%)
+  background: rgb(32 10 11 / 55%)
 }
 .hero__content {
   position: relative;
