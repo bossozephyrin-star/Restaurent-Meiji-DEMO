@@ -189,6 +189,7 @@ a:focus-visible, button:focus-visible {
   isolation: isolate;
   align-items: flex-end;
   overflow: hidden;
+  border-radius: .7rem;
   color: var(--paper);
   background: var(--forest);
   text-decoration: none
@@ -329,6 +330,7 @@ a:focus-visible, button:focus-visible {
   min-width: 0;
   overflow: hidden;
   border: 1px solid rgb(57 62 49 / 15%);
+  border-radius: .7rem;
   background: var(--paper);
   box-shadow: 0 10px 30px rgb(44 38 28 / 7%)
 }
@@ -422,6 +424,7 @@ model-viewer {
   margin-top: 1.3rem;
   padding: clamp(1.5rem,6vw,3rem);
   border-left: 3px solid var(--copper);
+  border-radius: .65rem;
   color: var(--paper);
   background: linear-gradient(120deg,var(--forest),var(--forest-deep))
 }
@@ -440,6 +443,7 @@ model-viewer {
   min-height: 13rem;
   padding: 1.4rem;
   border-top: 3px solid var(--copper);
+  border-radius: .65rem;
   background: var(--paper);
   box-shadow: 0 12px 32px rgb(44 38 28 / 8%)
 }
