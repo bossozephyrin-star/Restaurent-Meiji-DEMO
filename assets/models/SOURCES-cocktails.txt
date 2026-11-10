@@ -1,0 +1,2 @@
+Modèles 3D légers générés localement pour la démo avec le script tools/create-cocktail-models.mjs.
+Ils représentent des verres stylisés et ne sont pas des scans des boissons de Meiji.

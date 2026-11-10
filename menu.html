@@ -29,134 +29,129 @@
       <a href="#avis">Avis</a>
     </nav>
 
-    <nav class="menu-nav menu-nav--secondaire" aria-label="Catégories de Mes plats">
-      <a href="#entrees">Entrées</a>
-      <a href="#salades-pokes">Salades &amp; Pokes</a>
-      <a href="#tartares">Tartares</a>
-      <a href="#sashimi">Sashimi &amp; Shirashi</a>
-      <a href="#soupes">Soupes</a>
-      <a href="#nigiri">Nigiri x 2</a>
-      <a href="#maki">Maki x 4</a>
-      <a href="#spring-roll">Spring Roll x 4</a>
-      <a href="#soja-roll">Soja Roll x 6</a>
-      <a href="#california">California Roll x 4</a>
-      <a href="#snow-roll">Snow Roll x 4</a>
-      <a href="#crispy-crunchy">Crispy &amp; Crunchy</a>
-      <a href="#originaux">Originaux x 4</a>
-      <a href="#speciaux">Spéciaux x 8</a>
-      <a href="#plats-chauds">Plats Chauds</a>
-      <a href="#yakitori">Yakitori</a>
-      <a href="#accompagnements">Accompagnements</a>
-      <a href="#desserts">Desserts</a>
-    </nav>
-
     <main>
       <div class="menu-content" id="menu">
-        <h1>Notre menu</h1>
-        <p class="menu-note">La démo présente trois plats. Les rubriques suivent l’organisation du menu officiel.</p>
+        <header class="menu-intro">
+          <p class="menu-eyebrow">Meiji Sushi &amp; Grill</p>
+          <h1>Notre menu</h1>
+          <p>Quelques incontournables à découvrir en image et en 3D.</p>
+        </header>
 
         <section id="mes-plats" aria-labelledby="titre-mes-plats">
           <h2 id="titre-mes-plats">Mes plats</h2>
+          <nav class="menu-nav menu-nav--secondaire" aria-label="Catégories de Mes plats">
+            <a href="#sashimi">Sashimi &amp; Shirashi</a>
+            <a href="#nigiri">Nigiri x 2</a>
+            <a href="#maki">Maki x 4</a>
+          </nav>
 
-          <section class="categorie-menu" id="entrees"><h3>Entrées</h3></section>
-          <section class="categorie-menu" id="salades-pokes"><h3>Salades &amp; Pokes</h3></section>
-          <section class="categorie-menu" id="tartares"><h3>Tartares</h3></section>
+          <div class="liste-cartes liste-cartes--plats">
+            <article class="carte-plat" id="sashimi" aria-labelledby="titre-sashimi">
+              <p class="carte-plat__categorie">Sashimi &amp; Shirashi</p>
+              <div class="carte-plat__entete">
+                <h3 id="titre-sashimi">Sashimi saumon ou tataki</h3>
+                <p class="prix">Prix à définir</p>
+              </div>
+              <p>Tranches fines, gingembre et wasabi.</p>
+              <p class="ingredients">Saumon frais ou tataki</p>
+              <button class="plat-apercu" type="button" aria-label="Voir le sashimi en 3D" aria-controls="viewer-sashimi" data-ouvrir-viewer>
+                <img src="./assets/img/plats/sashimi.jpg" alt="Tranches de sashimi de saumon sur une assiette" width="1200" height="800" loading="lazy" />
+                <span>Voir en 3D</span>
+              </button>
+              <model-viewer id="viewer-sashimi" src="./assets/models/sashimi.glb" alt="Tranches de sashimi de saumon sur une assiette avec gingembre et wasabi" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden></model-viewer>
+              <button class="viewer-retour" type="button" data-fermer-viewer="viewer-sashimi" hidden>Revoir la photo</button>
+            </article>
 
-          <section class="categorie-menu" id="sashimi" aria-labelledby="titre-sashimi">
-            <h3 id="titre-sashimi">Sashimi &amp; Shirashi</h3>
-            <div class="liste-cartes">
-              <article class="carte-plat">
-                <div class="carte-plat__entete">
-                  <h4>Sashimi Saumon ou Tataki</h4>
-                  <p class="prix">Prix à définir</p>
-                </div>
-                <p>Tranches finement préparées, servies avec gingembre et wasabi.</p>
-                <p class="ingredients">Saumon frais ou tataki</p>
-                <button class="plat-apercu" type="button" aria-label="Voir le sashimi en 3D" aria-controls="viewer-sashimi" data-ouvrir-viewer>
-                  <img src="./assets/img/plats/sashimi.jpg" alt="Tranches de sashimi de saumon sur une assiette" width="1200" height="800" loading="lazy" />
-                  <span>Voir en 3D</span>
-                </button>
-                <model-viewer id="viewer-sashimi" src="./assets/models/sashimi.glb" alt="Tranches de sashimi de saumon sur une assiette avec gingembre et wasabi" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden></model-viewer>
-                <button class="viewer-retour" type="button" data-fermer-viewer="viewer-sashimi" hidden>Revoir la photo</button>
-              </article>
-            </div>
-          </section>
+            <article class="carte-plat" id="nigiri" aria-labelledby="titre-nigiri">
+              <p class="carte-plat__categorie">Nigiri x 2</p>
+              <div class="carte-plat__entete">
+                <h3 id="titre-nigiri">Nigiri saumon ou tataki</h3>
+                <p class="prix">Prix à définir</p>
+              </div>
+              <p>Deux pièces à déguster en une bouchée.</p>
+              <p class="ingredients">Saumon, riz vinaigré</p>
+              <button class="plat-apercu" type="button" aria-label="Voir les nigiri en 3D" aria-controls="viewer-nigiri" data-ouvrir-viewer>
+                <img src="./assets/img/plats/nigiri.jpg" alt="Nigiri au saumon servis sur une assiette" width="1200" height="1800" loading="lazy" />
+                <span>Voir en 3D</span>
+              </button>
+              <model-viewer id="viewer-nigiri" src="./assets/models/nigiri.glb" alt="Deux nigiri au saumon sur une assiette" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden></model-viewer>
+              <button class="viewer-retour" type="button" data-fermer-viewer="viewer-nigiri" hidden>Revoir la photo</button>
+            </article>
 
-          <section class="categorie-menu" id="soupes"><h3>Soupes</h3></section>
-          <section class="categorie-menu" id="nigiri" aria-labelledby="titre-nigiri">
-            <h3 id="titre-nigiri">Nigiri x 2</h3>
-            <div class="liste-cartes">
-              <article class="carte-plat">
-                <div class="carte-plat__entete">
-                  <h4>Nigiri Saumon ou Tataki</h4>
-                  <p class="prix">Prix à définir</p>
-                </div>
-                <p>Deux pièces à déguster en une bouchée.</p>
-                <p class="ingredients">Saumon, riz vinaigré</p>
-                <button class="plat-apercu" type="button" aria-label="Voir les nigiri en 3D" aria-controls="viewer-nigiri" data-ouvrir-viewer>
-                  <img src="./assets/img/plats/nigiri.jpg" alt="Nigiri au saumon servis sur une assiette" width="1200" height="800" loading="lazy" />
-                  <span>Voir en 3D</span>
-                </button>
-                <model-viewer id="viewer-nigiri" src="./assets/models/nigiri.glb" alt="Deux nigiri au saumon sur une assiette" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden></model-viewer>
-                <button class="viewer-retour" type="button" data-fermer-viewer="viewer-nigiri" hidden>Revoir la photo</button>
-              </article>
-            </div>
-          </section>
-
-          <section class="categorie-menu" id="maki" aria-labelledby="titre-maki">
-            <h3 id="titre-maki">Maki x 4</h3>
-            <div class="liste-cartes">
-              <article class="carte-plat">
-                <div class="carte-plat__entete">
-                  <h4>Maki Crevette</h4>
-                  <p class="prix">Prix à définir</p>
-                </div>
-                <p>Quatre pièces roulées dans une feuille de nori.</p>
-                <p class="ingredients">Crevette, avocat, concombre</p>
-                <button class="plat-apercu" type="button" aria-label="Voir les maki en 3D" aria-controls="viewer-maki" data-ouvrir-viewer>
-                  <img src="./assets/img/plats/maki.jpg" alt="Rouleaux maki servis sur une assiette" width="1200" height="800" loading="lazy" />
-                  <span>Voir en 3D</span>
-                </button>
-                <model-viewer id="viewer-maki" src="./assets/models/maki.glb" alt="Quatre makis à la crevette, à l’avocat et au concombre" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden></model-viewer>
-                <button class="viewer-retour" type="button" data-fermer-viewer="viewer-maki" hidden>Revoir la photo</button>
-              </article>
-            </div>
-          </section>
-
-          <section class="categorie-menu" id="spring-roll"><h3>Spring Roll x 4</h3></section>
-          <section class="categorie-menu" id="soja-roll"><h3>Soja Roll x 6</h3></section>
-          <section class="categorie-menu" id="california"><h3>California Roll x 4</h3></section>
-          <section class="categorie-menu" id="snow-roll"><h3>Snow Roll x 4</h3></section>
-          <section class="categorie-menu" id="crispy-crunchy"><h3>Crispy &amp; Crunchy</h3></section>
-          <section class="categorie-menu" id="originaux"><h3>Originaux x 4</h3></section>
-          <section class="categorie-menu" id="speciaux"><h3>Spéciaux x 8</h3></section>
-          <section class="categorie-menu" id="plats-chauds"><h3>Plats Chauds</h3></section>
-          <section class="categorie-menu" id="yakitori"><h3>Yakitori</h3></section>
-          <section class="categorie-menu" id="accompagnements"><h3>Accompagnements</h3></section>
-          <section class="categorie-menu" id="desserts"><h3>Desserts</h3></section>
+            <article class="carte-plat" id="maki" aria-labelledby="titre-maki">
+              <p class="carte-plat__categorie">Maki x 4</p>
+              <div class="carte-plat__entete">
+                <h3 id="titre-maki">Maki crevette</h3>
+                <p class="prix">Prix à définir</p>
+              </div>
+              <p>Quatre pièces roulées dans une feuille de nori.</p>
+              <p class="ingredients">Crevette, avocat, concombre</p>
+              <button class="plat-apercu" type="button" aria-label="Voir les maki en 3D" aria-controls="viewer-maki" data-ouvrir-viewer>
+                <img src="./assets/img/plats/maki.jpg" alt="Rouleaux maki servis sur une assiette" width="1200" height="900" loading="lazy" />
+                <span>Voir en 3D</span>
+              </button>
+              <model-viewer id="viewer-maki" src="./assets/models/maki.glb" alt="Quatre makis à la crevette, à l’avocat et au concombre" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden></model-viewer>
+              <button class="viewer-retour" type="button" data-fermer-viewer="viewer-maki" hidden>Revoir la photo</button>
+            </article>
+          </div>
         </section>
 
         <section id="boissons" aria-labelledby="titre-boissons">
           <h2 id="titre-boissons">Boissons</h2>
-          <nav class="menu-nav menu-nav--secondaire" aria-label="Catégories de boissons">
-            <a href="#softs-chauds">Softs &amp; Chauds</a>
-            <a href="#cocktails">Cocktails</a>
-            <a href="#spiritueux">Spiritueux</a>
-            <a href="#vins-champagnes">Vins &amp; Champagnes</a>
-          </nav>
-          <section class="categorie-menu" id="softs-chauds"><h3>Softs &amp; Chauds</h3></section>
-          <section class="categorie-menu" id="cocktails"><h3>Cocktails</h3></section>
-          <section class="categorie-menu" id="spiritueux"><h3>Spiritueux</h3></section>
-          <section class="categorie-menu" id="vins-champagnes"><h3>Vins &amp; Champagnes</h3></section>
+          <p class="section-lead">Cocktails de démonstration. Les recettes et les noms restent à confirmer.</p>
+          <div class="liste-cartes liste-cartes--boissons">
+            <article class="carte-plat carte-boisson">
+              <button class="plat-apercu" type="button" aria-label="Voir le cocktail Soleil en 3D" aria-controls="viewer-cocktail-soleil" data-ouvrir-viewer>
+                <img src="./assets/img/boissons/cocktail-soleil.jpg" alt="Cocktail dégradé orange et rouge avec agrumes et menthe" width="720" height="1080" loading="lazy" />
+                <span>Voir en 3D</span>
+              </button>
+              <model-viewer id="viewer-cocktail-soleil" src="./assets/models/cocktail-soleil.glb" alt="Verre de cocktail aux agrumes en trois dimensions" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden></model-viewer>
+              <button class="viewer-retour" type="button" data-fermer-viewer="viewer-cocktail-soleil" hidden>Revoir la photo</button>
+              <div class="carte-plat__entete">
+                <h3>Cocktail Soleil</h3>
+                <p class="prix">Prix à définir</p>
+              </div>
+              <p class="ingredients">Visuel de démonstration, composition à confirmer.</p>
+            </article>
+
+            <article class="carte-plat carte-boisson">
+              <button class="plat-apercu" type="button" aria-label="Voir le cocktail Orange en 3D" aria-controls="viewer-cocktail-orange" data-ouvrir-viewer>
+                <img src="./assets/img/boissons/cocktail-orange.jpg" alt="Cocktail orange garni d’une rondelle d’orange et de menthe" width="720" height="1080" loading="lazy" />
+                <span>Voir en 3D</span>
+              </button>
+              <model-viewer id="viewer-cocktail-orange" src="./assets/models/cocktail-orange.glb" alt="Verre de cocktail à l’orange en trois dimensions" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden></model-viewer>
+              <button class="viewer-retour" type="button" data-fermer-viewer="viewer-cocktail-orange" hidden>Revoir la photo</button>
+              <div class="carte-plat__entete">
+                <h3>Cocktail Orange</h3>
+                <p class="prix">Prix à définir</p>
+              </div>
+              <p class="ingredients">Visuel de démonstration, composition à confirmer.</p>
+            </article>
+          </div>
         </section>
 
         <section id="hookah" aria-labelledby="titre-hookah">
           <h2 id="titre-hookah">Hookah</h2>
+          <p class="section-lead">Les produits sans photo ne sont pas présentés dans cette démo.</p>
         </section>
 
         <section id="avis" aria-labelledby="titre-avis">
           <h2 id="titre-avis">Avis</h2>
-          <p><a href="https://menu-meiji.itech.cg/">Consulter les avis sur le site officiel</a></p>
+          <p class="section-lead">Exemples fictifs pour montrer la présentation des avis.</p>
+          <div class="liste-avis">
+            <article class="carte-avis">
+              <p class="carte-avis__texte">« Les plats étaient frais et la présentation très soignée. »</p>
+              <p class="carte-avis__auteur">Avis fictif de démonstration</p>
+            </article>
+            <article class="carte-avis">
+              <p class="carte-avis__texte">« Une belle découverte, avec des saveurs équilibrées. »</p>
+              <p class="carte-avis__auteur">Avis fictif de démonstration</p>
+            </article>
+            <article class="carte-avis">
+              <p class="carte-avis__texte">« Le cadre est agréable et l’accueil chaleureux. »</p>
+              <p class="carte-avis__auteur">Avis fictif de démonstration</p>
+            </article>
+          </div>
         </section>
       </div>
     </main>

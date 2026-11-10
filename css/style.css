@@ -21,6 +21,8 @@
   --color-accent: #24543b;
   --color-prix: #24543b;
   --color-focus: #24543b;
+  --color-accent-chaud: #a65b3b;
+  --color-ligne: #ded9cf;
   --color-surface: #fffdf8;
   --color-viewer: #e7e9e3;
   --espace-s: 0.5rem;
@@ -220,12 +222,13 @@ body > main {
   top: 0;
   z-index: 10;
   display: flex;
-  gap: var(--espace-l);
+  justify-content: center;
+  gap: clamp(var(--espace-m), 4vw, 3rem);
   overflow-x: auto;
   white-space: nowrap;
-  padding: var(--espace-m) max(var(--espace-m), calc((100% - 72rem) / 2 + var(--espace-m)));
-  background-color: var(--color-fond);
-  border-bottom: 1px solid rgb(36 84 59 / 18%);
+  padding: 1.1rem max(var(--espace-m), calc((100% - 78rem) / 2 + var(--espace-m)));
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-ligne);
 }
 
 .menu-nav a {
@@ -238,6 +241,8 @@ body > main {
   position: static;
   z-index: auto;
   gap: var(--espace-m);
+  justify-content: flex-start;
+  margin-block: var(--espace-m) var(--espace-xl);
   padding: var(--espace-s) 0;
   overflow-x: auto;
   border: 0;
@@ -245,58 +250,89 @@ body > main {
   font-size: 0.9rem;
 }
 
+.menu-nav a {
+  text-decoration: none;
+  text-underline-offset: 0.35em;
+}
+
+.menu-nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent-chaud);
+  text-decoration-thickness: 2px;
+}
+
 .menu-content {
-  width: min(72rem, 100%);
+  width: min(78rem, 100%);
   margin-inline: auto;
-  padding: var(--espace-xl) var(--espace-m);
+  padding: clamp(2.5rem, 7vw, 5.5rem) var(--espace-m);
   scroll-margin-top: 5rem;
 }
 
-.menu-content > h1 {
-  margin-bottom: var(--espace-xl);
+.menu-intro {
+  margin-bottom: clamp(3rem, 7vw, 5.5rem);
+  text-align: center;
 }
 
-.menu-content section {
-  margin-bottom: var(--espace-xl);
-  scroll-margin-top: 5rem;
-}
-
-.menu-content section > h2 {
-  margin-bottom: var(--espace-m);
-  color: var(--color-accent);
-}
-
-.menu-content .categorie-menu {
-  margin-bottom: var(--espace-m);
-  scroll-margin-top: 5rem;
-}
-
-.categorie-menu > h3 {
+.menu-eyebrow {
   margin-bottom: var(--espace-s);
-  color: var(--color-accent);
-  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  color: var(--color-accent-chaud);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
 }
 
-.menu-note {
-  margin-bottom: var(--espace-l);
+.menu-intro h1 {
+  margin-bottom: var(--espace-s);
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  letter-spacing: 0.015em;
+}
+
+.menu-intro > p:last-child,
+.section-lead {
   color: var(--color-texte-secondaire);
+}
+
+.menu-content > section {
+  margin-bottom: clamp(3.5rem, 8vw, 6rem);
+  scroll-margin-top: 5rem;
+}
+
+.menu-content > section > h2 {
+  display: flex;
+  align-items: center;
+  gap: var(--espace-l);
+  margin-bottom: var(--espace-l);
+  color: var(--color-accent);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.menu-content > section > h2::after {
+  height: 1px;
+  flex: 1;
+  content: "";
+  background: var(--color-ligne);
 }
 
 .liste-cartes {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
   gap: var(--espace-l);
 }
 
+.liste-cartes--boissons {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+  margin-top: var(--espace-l);
+}
+
 .carte-plat {
-  display: grid;
-  align-content: start;
-  gap: var(--espace-m);
+  display: flex;
+  flex-direction: column;
   min-width: 0;
-  padding: var(--espace-l);
+  overflow: hidden;
   background-color: var(--color-surface);
-  border: 1px solid rgb(36 84 59 / 25%);
-  border-radius: 0.4rem;
+  border: 1px solid var(--color-ligne);
+  border-radius: 0.35rem;
 }
 
 .carte-plat__entete {
@@ -304,11 +340,26 @@ body > main {
   align-items: baseline;
   justify-content: space-between;
   gap: var(--espace-s);
+  margin: var(--espace-l) var(--espace-l) 0;
 }
 
-.carte-plat__entete h3 {
+.carte-plat__entete h3,
+.carte-plat__entete h4 {
   min-width: 0;
   flex: 1 1 auto;
+}
+
+.carte-plat__categorie {
+  margin: var(--espace-m) var(--espace-l) 0;
+  color: var(--color-accent-chaud);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.carte-plat > p {
+  margin: var(--espace-s) var(--espace-l) 0;
 }
 
 .prix {
@@ -339,7 +390,7 @@ model-viewer {
   padding: 0;
   overflow: hidden;
   border: 0;
-  border-radius: 0.4rem;
+  border-radius: 0;
   background: var(--color-viewer);
   cursor: pointer;
   text-align: left;
@@ -348,8 +399,17 @@ model-viewer {
 .plat-apercu img {
   display: block;
   width: 100%;
-  height: 300px;
+  height: clamp(15rem, 28vw, 22rem);
   object-fit: cover;
+}
+
+.carte-boisson .plat-apercu img {
+  height: clamp(20rem, 42vw, 31rem);
+  object-position: center 58%;
+}
+
+.carte-boisson model-viewer {
+  height: clamp(20rem, 42vw, 31rem);
 }
 
 .plat-apercu span {
@@ -364,13 +424,43 @@ model-viewer {
 }
 
 .viewer-retour {
-  justify-self: start;
+  align-self: flex-start;
+  margin: var(--espace-m) var(--espace-l) 0;
   padding: 0.45rem 0.75rem;
   border: 1px solid var(--color-accent);
   border-radius: 0.2rem;
   background: transparent;
   color: var(--color-accent);
   cursor: pointer;
+}
+
+.liste-avis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: var(--espace-m);
+  margin-top: var(--espace-l);
+}
+
+.carte-avis {
+  padding: var(--espace-l);
+  border: 1px solid var(--color-ligne);
+  border-top: 3px solid var(--color-accent-chaud);
+  border-radius: 0.25rem;
+  background: var(--color-surface);
+}
+
+.carte-avis__texte {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.35rem;
+  line-height: 1.35;
+}
+
+.carte-avis__auteur {
+  margin-top: var(--espace-l);
+  color: var(--color-texte-secondaire);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .plat-apercu:focus-visible,
@@ -444,6 +534,10 @@ a:focus-visible {
     width: 100%;
     justify-content: center;
     gap: var(--espace-l);
+  }
+
+  .menu-nav {
+    justify-content: flex-start;
   }
 
   .hero {
