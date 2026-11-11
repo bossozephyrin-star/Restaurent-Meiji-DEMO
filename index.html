@@ -10,6 +10,7 @@
     </title>
     <link rel="stylesheet" href="./assets/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./assets/js/meiji-transition.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -46,7 +47,7 @@
             Sushi &amp; Grill
           </p>
           <div class="hero__actions">
-            <a class="hero__button hero__button--primary" href="./menu.html">Découvrir notre menu</a><a class="hero__button hero__button--secondary" href="#contact">Nous trouver</a>
+            <a class="hero__button hero__button--primary" data-menu-transition href="./menu.html">Découvrir notre menu</a><a class="hero__button hero__button--secondary" href="#contact">Nous trouver</a>
           </div>
         </div>
       </section>
@@ -67,5 +68,10 @@
         </p>
       </div>
     </footer>
+    <div class="shoji-transition" aria-hidden="true">
+      <img class="shoji-transition__wordmark" src="./assets/img/meiji-wordmark.png" alt="" />
+      <span class="shoji-door shoji-door--left"></span>
+      <span class="shoji-door shoji-door--right"></span>
+    </div>
   </body>
 </html>

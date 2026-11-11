@@ -10,6 +10,14 @@
     </title>
     <link rel="stylesheet" href="./assets/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script>
+      try {
+        if (sessionStorage.getItem("meiji-menu-transition") === "1") {
+          document.documentElement.classList.add("door-arrival");
+        }
+      } catch {}
+    </script>
+    <script defer src="./assets/js/meiji-transition.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -53,5 +61,10 @@
         </p>
       </div>
     </footer>
+    <div class="shoji-transition" aria-hidden="true">
+      <img class="shoji-transition__wordmark" src="./assets/img/meiji-wordmark.png" alt="">
+      <span class="shoji-door shoji-door--left"></span>
+      <span class="shoji-door shoji-door--right"></span>
+    </div>
   </body>
 </html>
