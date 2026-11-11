@@ -38,7 +38,7 @@
         </p>
       </header>
       <nav class="subcat-nav" aria-label="Sous-catégories des plats">
-        <a href="#entrees">Entrées</a><a href="#nigiri">Nigiri</a><a href="#maki">Maki</a>
+        <a href="#entrees">Entrées</a><a href="#nigiri">Nigiri</a><a href="#maki">Maki</a><a href="#speciaux">Spéciaux</a>
       </nav>
       <section class="menu-section" id="entrees">
         <div class="section-heading">
@@ -161,6 +161,48 @@
               </button>
             </model-viewer>
             <button class="viewer-retour" type="button" data-fermer-viewer="viewer-maki" hidden>
+              Revoir la photo
+            </button>
+          </article>
+        </div>
+      </section>
+      <section class="menu-section" id="speciaux">
+        <div class="section-heading">
+          <p class="eyebrow">
+            04 / Spéciaux × 8
+          </p>
+          <h2>
+            Rolls spéciaux
+          </h2>
+        </div>
+        <div class="dish-grid row g-4">
+          <article class="dish-card col-12 col-lg-8">
+            <div class="dish-card__copy">
+              <p class="dish-card__kicker">
+                Spécial Meiji
+              </p>
+              <div class="dish-card__title">
+                <h3>
+                  Tokyo
+                </h3>
+                <span class="price">10 500 FCFA</span>
+              </div>
+              <p>
+                Huit pièces de roll spécial, frites à la tempura.
+              </p>
+              <p class="ingredients">
+                Algue, saumon, surimi, cheese, mayonnaise, tobiko
+              </p>
+            </div>
+            <button class="dish-preview" type="button" aria-label="Voir le roll Tokyo en 3D" aria-controls="viewer-tokyo" data-ouvrir-viewer>
+              <img src="./assets/img/plats/tokyo-special.jpeg" alt="Huit pièces du roll Tokyo avec sauce et tobiko rouge" width="720" height="1080" loading="lazy"><span>Voir en 3D ↗</span>
+            </button>
+            <model-viewer id="viewer-tokyo" src="./assets/models/tokyo-special.glb" alt="Roll Tokyo Meiji en trois dimensions" camera-controls touch-action="pan-y" auto-rotate loading="lazy" ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" hidden>
+              <button class="ar-button" slot="ar-button" type="button">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/></svg>Voir sur ma table
+              </button>
+            </model-viewer>
+            <button class="viewer-retour" type="button" data-fermer-viewer="viewer-tokyo" hidden>
               Revoir la photo
             </button>
           </article>
