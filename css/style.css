@@ -308,17 +308,31 @@ a:focus-visible, button:focus-visible {
   padding: .7rem 0;
   background: rgb(234 216 204 / 97%)
 }
-.subcat-nav a {
+.subcat-nav button {
   flex: 0 0 auto;
   padding: .5rem .75rem;
   border: 1px solid var(--line);
   color: var(--forest);
+  border-radius: .7rem;
+  background: var(--paper);
+  font: inherit;
   font-size: .84rem;
+  cursor: pointer;
   text-decoration: none
 }
-.subcat-nav a:hover {
+.subcat-nav button:hover {
   border-color: var(--forest);
   background: var(--paper)
+}
+.subcat-nav button[aria-selected="true"] {
+  border-color: var(--forest);
+  background: var(--forest);
+  color: var(--paper);
+  font-weight: 700
+}
+.subcat-nav button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: -3px
 }
 .menu-section {
   margin: 2.6rem 0 3.3rem;

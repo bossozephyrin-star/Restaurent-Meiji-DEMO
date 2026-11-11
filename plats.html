@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script type="module" src="./assets/js/model-viewer-4.4.0.min.js">
     </script>
+    <script type="module" src="./assets/js/menu-categories.js"></script>
     <script type="module" src="./assets/js/menu-viewers.js">
     </script>
   </head>
@@ -37,10 +38,14 @@
           Quelques incontournables en photo et en 3D.
         </p>
       </header>
-      <nav class="subcat-nav" aria-label="Sous-catégories des plats">
-        <a href="#entrees">Entrées</a><a href="#nigiri">Nigiri</a><a href="#maki">Maki</a><a href="#speciaux">Spéciaux</a>
-      </nav>
-      <section class="menu-section" id="entrees">
+      <div class="subcat-nav" role="tablist" aria-label="Sous-catégories des plats">
+        <button type="button" id="onglet-entrees" role="tab" aria-controls="entrees" aria-selected="true" tabindex="0">Entrées</button>
+        <button type="button" id="onglet-nigiri" role="tab" aria-controls="nigiri" aria-selected="false" tabindex="-1">Nigiri</button>
+        <button type="button" id="onglet-maki" role="tab" aria-controls="maki" aria-selected="false" tabindex="-1">Maki</button>
+        <button type="button" id="onglet-speciaux" role="tab" aria-controls="speciaux" aria-selected="false" tabindex="-1">Spéciaux</button>
+        <button type="button" id="onglet-chauds" role="tab" aria-controls="chauds" aria-selected="false" tabindex="-1">Plats chauds</button>
+      </div>
+      <section class="menu-section" id="entrees" role="tabpanel" aria-labelledby="onglet-entrees" tabindex="0">
         <div class="section-heading">
           <p class="eyebrow">
             01 / Entrées
@@ -82,7 +87,7 @@
           </article>
         </div>
       </section>
-      <section class="menu-section" id="nigiri">
+      <section class="menu-section" id="nigiri" role="tabpanel" aria-labelledby="onglet-nigiri" tabindex="0" hidden>
         <div class="section-heading">
           <p class="eyebrow">
             02 / Sushi
@@ -124,7 +129,7 @@
           </article>
         </div>
       </section>
-      <section class="menu-section" id="maki">
+      <section class="menu-section" id="maki" role="tabpanel" aria-labelledby="onglet-maki" tabindex="0" hidden>
         <div class="section-heading">
           <p class="eyebrow">
             03 / Sushi
@@ -166,7 +171,7 @@
           </article>
         </div>
       </section>
-      <section class="menu-section" id="speciaux">
+      <section class="menu-section" id="speciaux" role="tabpanel" aria-labelledby="onglet-speciaux" tabindex="0" hidden>
         <div class="section-heading">
           <p class="eyebrow">
             04 / Spéciaux × 8
@@ -203,6 +208,78 @@
               </button>
             </model-viewer>
             <button class="viewer-retour" type="button" data-fermer-viewer="viewer-tokyo" hidden>
+              Revoir la photo
+            </button>
+          </article>
+          <article class="dish-card col-12 col-lg-8">
+            <div class="dish-card__copy">
+              <p class="dish-card__kicker">
+                Spécial Meiji
+              </p>
+              <div class="dish-card__title">
+                <h3>
+                  Meiji Langouste
+                </h3>
+                <span class="price">10 000 FCFA</span>
+              </div>
+              <p>
+                Roll spécial à la langouste, accompagné de sauce spéciale.
+              </p>
+              <p class="ingredients">
+                Algue, langouste, avocat, cheese, surimi, tartare de langouste, sauce spéciale
+              </p>
+            </div>
+            <button class="dish-preview" type="button" aria-label="Voir le Meiji Langouste en 3D" aria-controls="viewer-langouste" data-ouvrir-viewer>
+              <img src="./assets/img/plats/meiji-langouste.jpeg" alt="Meiji Langouste, roll nappé de sauce et servi avec une langouste" width="1080" height="1920" loading="lazy"><span>Voir en 3D ↗</span>
+            </button>
+            <model-viewer id="viewer-langouste" src="./assets/models/meiji-langouste.glb" alt="Modèle 3D du roll Meiji Langouste" camera-controls touch-action="pan-y" auto-rotate loading="lazy" ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" hidden>
+              <button class="ar-button" slot="ar-button" type="button">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/></svg>Voir sur ma table
+              </button>
+            </model-viewer>
+            <button class="viewer-retour" type="button" data-fermer-viewer="viewer-langouste" hidden>
+              Revoir la photo
+            </button>
+          </article>
+        </div>
+      </section>
+      <section class="menu-section" id="chauds" role="tabpanel" aria-labelledby="onglet-chauds" tabindex="0" hidden>
+        <div class="section-heading">
+          <p class="eyebrow">
+            05 / Plats chauds
+          </p>
+          <h2>
+            Yakisoba
+          </h2>
+        </div>
+        <div class="dish-grid row g-4">
+          <article class="dish-card col-12 col-lg-8">
+            <div class="dish-card__copy">
+              <p class="dish-card__kicker">
+                Nouilles sautées
+              </p>
+              <div class="dish-card__title">
+                <h3>
+                  Yakisoba Boeuf
+                </h3>
+                <span class="price">7 000 FCFA</span>
+              </div>
+              <p>
+                Nouilles sautées, fines lamelles de bœuf, légumes croquants et sauce yakisoba.
+              </p>
+              <p class="ingredients">
+                Nouilles, bœuf, légumes, sauce yakisoba
+              </p>
+            </div>
+            <button class="dish-preview" type="button" aria-label="Voir le Yakisoba Boeuf en 3D" aria-controls="viewer-yakisoba" data-ouvrir-viewer>
+              <img src="./assets/img/plats/yakisoba-boeuf.jpeg" alt="Assiette de nouilles yakisoba au bœuf et aux légumes" width="1080" height="720" loading="lazy"><span>Voir en 3D ↗</span>
+            </button>
+            <model-viewer id="viewer-yakisoba" src="./assets/models/yakisoba-boeuf.glb" alt="Modèle 3D du Yakisoba Boeuf" camera-controls touch-action="pan-y" auto-rotate loading="lazy" ar ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" hidden>
+              <button class="ar-button" slot="ar-button" type="button">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3Z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/></svg>Voir sur ma table
+              </button>
+            </model-viewer>
+            <button class="viewer-retour" type="button" data-fermer-viewer="viewer-yakisoba" hidden>
               Revoir la photo
             </button>
           </article>
