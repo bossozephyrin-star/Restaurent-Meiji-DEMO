@@ -877,110 +877,25 @@ model-viewer {
   }
 }
 
-/* Transition shōji entre l’accueil et la page du menu. */
-.shoji-transition {
-  position: fixed;
-  z-index: 1000;
-  inset: 0;
-  overflow: hidden;
-  visibility: hidden;
-  pointer-events: none;
-  background: var(--forest-night)
-}
-.shoji-door {
+/* Bouton de réalité augmentée : model-viewer ne l'affiche que sur les appareils compatibles. */
+.ar-button {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 51%;
-  border: clamp(.5rem, 2vw, 1.5rem) solid var(--burgundy);
-  background-color: var(--cream);
-  background-image: linear-gradient(90deg, transparent 0 8%, rgb(91 18 19 / 14%) 8.2% 8.8%, transparent 9% 48%, rgb(91 18 19 / 14%) 48.2% 48.8%, transparent 49%), linear-gradient(0deg, transparent 0 12%, rgb(91 18 19 / 12%) 12.2% 12.8%, transparent 13% 49%, rgb(91 18 19 / 12%) 49.2% 49.8%, transparent 50%), url("../assets/img/meiji-waves.svg");
-  background-position: center, center, center;
-  background-size: 100% 100%, 100% 100%, auto 28%;
-  box-shadow: inset 0 0 0 .45rem var(--sand), 0 0 3rem rgb(12 15 10 / 24%);
-  transition: transform 640ms cubic-bezier(.76, 0, .24, 1)
+  right: .8rem;
+  bottom: .8rem;
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem .9rem;
+  border: 1px solid var(--forest-night);
+  border-radius: .5rem;
+  color: var(--cream);
+  background: var(--forest-night);
+  font: 700 .8rem/1 "Roboto", Arial, sans-serif;
+  letter-spacing: .04em;
+  cursor: pointer
 }
-.shoji-door--left {
-  left: 0;
-  border-radius: 0 1.4rem 1.4rem 0;
-  transform: translateX(-102%)
-}
-.shoji-door--right {
-  right: 0;
-  border-radius: 1.4rem 0 0 1.4rem;
-  transform: translateX(102%)
-}
-.shoji-transition__wordmark {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  width: min(16rem, 45vw);
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  transition: opacity 180ms ease-out
-}
-html.door-departure .shoji-transition,
-html.door-arrival .shoji-transition {
-  visibility: visible
-}
-html.door-departure .shoji-door,
-html.door-arrival .shoji-door {
-  transform: translateX(0)
-}
-html.door-departure .shoji-transition__wordmark,
-html.door-arrival .shoji-transition__wordmark {
-  opacity: 1;
-  transition-delay: 220ms
-}
-html.door-open .shoji-door--left {
-  transform: translateX(-102%)
-}
-html.door-open .shoji-door--right {
-  transform: translateX(102%)
-}
-html.door-open .shoji-transition__wordmark {
-  opacity: 0;
-  transition-delay: 0ms
-}
-html.door-open .shoji-transition {
-  transition: visibility 0s linear 640ms;
-  visibility: hidden
-}
-html.door-departure .hero__content {
-  opacity: 0;
-  transition: opacity 180ms ease-out
-}
-@keyframes menu-arrival {
-  from {
-    opacity: 0;
-    transform: translateY(14px)
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0)
-  }
-}
-html.door-arrival .menu-banner {
-  animation: menu-arrival 520ms 120ms both
-}
-html.door-arrival .category-card {
-  animation: menu-arrival 520ms both
-}
-html.door-arrival .category-card:nth-child(2) {
-  animation-delay: 80ms
-}
-html.door-arrival .category-card:nth-child(3) {
-  animation-delay: 150ms
-}
-html.door-arrival .category-card:nth-child(4) {
-  animation-delay: 220ms
-}
-@media (prefers-reduced-motion: reduce) {
-  .shoji-door, .shoji-transition__wordmark, .hero__content {
-    transition: none !important
-  }
-  html.door-arrival .menu-banner, html.door-arrival .category-card {
-    animation: none
-  }
+.ar-button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px
 }
