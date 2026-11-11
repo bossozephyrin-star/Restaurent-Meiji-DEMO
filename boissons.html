@@ -18,15 +18,15 @@
   <body>
     <header class="site-header">
       <a class="site-logo" href="./index.html" aria-label="Meiji Sushi &amp; Grill, accueil"><img src="./assets/img/meiji-logo.png" alt="Meiji Sushi &amp; Grill"></a>
-      <nav class="site-nav" aria-label="Navigation principale">
+      <nav class="site-nav">
         <a href="./index.html">Accueil</a><a href="./menu.html" aria-current="page">Menu</a><a href="./index.html#contact">Contact</a>
       </nav>
     </header>
     <nav class="category-nav" aria-label="Rubriques du menu">
-      <a href="./plats.html">La carte</a><a class="is-current" href="./boissons.html" aria-current="page">Boissons</a>
+      <a href="./plats.html">Mes plats</a><a class="is-current" href="./boissons.html" aria-current="page">Boissons</a><a href="./hookah.html">Hookah</a><a href="./avis.html">Avis</a>
     </nav>
-    <main class="page-shell">
-      <header class="page-intro">
+    <main class="page-shell container">
+      <header class="page-heading page-heading--drinks">
         <p class="eyebrow">
           Au comptoir
         </p>
@@ -38,10 +38,10 @@
         </p>
       </header>
       <section class="menu-section">
-        <div class="drink-grid">
-          <article class="dish-card drink-card">
+        <div class="drink-grid row g-4">
+          <article class="dish-card drink-card col-12 col-md-6">
             <button class="dish-preview" type="button" aria-label="Voir le cocktail Soleil en 3D" aria-controls="viewer-cocktail-soleil" data-ouvrir-viewer>
-              <img src="./assets/img/boissons/cocktail-soleil.jpg" alt="Cocktail orange et rouge avec agrumes et menthe" width="720" height="1080" loading="lazy"><span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg> Voir en 3D</span>
+              <img src="./assets/img/boissons/cocktail-soleil.jpg" alt="Cocktail orange et rouge avec agrumes et menthe" width="720" height="1080" loading="lazy"><span>Voir en 3D ↗</span>
             </button>
             <model-viewer id="viewer-cocktail-soleil" src="./assets/models/cocktail-soleil.glb" alt="Verre de cocktail aux agrumes en 3D" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden>
             </model-viewer>
@@ -59,13 +59,13 @@
                 <span class="price">Prix à définir</span>
               </div>
               <p class="ingredients">
-                Visuel de démonstration, composition à confirmer
+                Visuel de démonstration, composition à confirmer.
               </p>
             </div>
           </article>
-          <article class="dish-card drink-card">
+          <article class="dish-card drink-card col-12 col-md-6">
             <button class="dish-preview" type="button" aria-label="Voir le cocktail Orange en 3D" aria-controls="viewer-cocktail-orange" data-ouvrir-viewer>
-              <img src="./assets/img/boissons/cocktail-orange.jpg" alt="Cocktail orange garni d’une rondelle d’orange et de menthe" width="720" height="1080" loading="lazy"><span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg> Voir en 3D</span>
+              <img src="./assets/img/boissons/cocktail-orange.jpg" alt="Cocktail orange garni d’une rondelle d’orange et de menthe" width="720" height="1080" loading="lazy"><span>Voir en 3D ↗</span>
             </button>
             <model-viewer id="viewer-cocktail-orange" src="./assets/models/cocktail-orange.glb" alt="Verre de cocktail à l’orange en 3D" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden>
             </model-viewer>
@@ -83,7 +83,7 @@
                 <span class="price">Prix à définir</span>
               </div>
               <p class="ingredients">
-                Visuel de démonstration, composition à confirmer
+                Visuel de démonstration, composition à confirmer.
               </p>
             </div>
           </article>

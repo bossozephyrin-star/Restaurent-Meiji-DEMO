@@ -18,8 +18,8 @@
         <a href="./index.html">Accueil</a><a href="./menu.html" aria-current="page">Menu</a><a href="./index.html#contact">Contact</a>
       </nav>
     </header>
-    <main class="page-shell">
-      <header class="page-intro">
+    <main class="menu-home container">
+      <section class="menu-banner">
         <p class="eyebrow">
           Meiji Sushi &amp; Grill · Brazzaville
         </p>
@@ -27,33 +27,14 @@
           Le menu
         </h1>
         <p>
-          Choisissez une rubrique pour découvrir notre sélection
+          Choisissez une rubrique pour découvrir notre sélection.
         </p>
         <p class="demo-note">
           Démo non officielle
         </p>
-      </header>
-      <nav class="category-grid" aria-label="Rubriques du menu">
-        <a class="category-card" href="./plats.html">
-          <img src="./assets/img/plats/sashimi.jpg" alt="Sashimi de saumon" width="1200" height="800">
-          <span class="category-card__content">
-            <strong>La carte</strong>
-            <span class="category-card__desc">Entrées, salades, sushi et plus</span>
-            <span class="category-card__link">Voir la carte
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </span>
-        </a>
-        <a class="category-card" href="./boissons.html">
-          <img src="./assets/img/boissons/cocktail-soleil.jpg" alt="Cocktail aux agrumes" width="720" height="1080" loading="lazy">
-          <span class="category-card__content">
-            <strong>Boissons</strong>
-            <span class="category-card__desc">Cocktails de démonstration</span>
-            <span class="category-card__link">Voir les boissons
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </span>
-        </a>
+      </section>
+      <nav class="category-grid row g-3" aria-label="Rubriques du menu">
+        <a class="category-card col-12 col-sm-6 col-xl-3" href="./plats.html"><img src="./assets/img/plats/sashimi.jpg" alt="Sashimi de saumon" loading="lazy"><span class="category-card__shade"></span><span class="category-card__content"><span class="category-card__index">01 / À LA CARTE</span><strong>Mes plats</strong><span>Entrées, salades, sushi et plus</span><span class="category-card__link">Explorer la carte ↗</span></span></a><a class="category-card col-12 col-sm-6 col-xl-3" href="./boissons.html"><img src="./assets/img/boissons/cocktail-soleil.jpg" alt="Cocktail aux agrumes" loading="lazy"><span class="category-card__shade"></span><span class="category-card__content"><span class="category-card__index">02 / AU COMPTOIR</span><strong>Boissons</strong><span>Cocktails de démonstration</span><span class="category-card__link">Voir les boissons ↗</span></span></a><a class="category-card category-card--hookah col-12 col-sm-6 col-xl-3" href="./hookah.html"><span class="category-card__content"><span class="category-card__index">03 / L’ESPACE LOUNGE</span><strong>Hookah</strong><span>La sélection sera ajoutée prochainement</span><span class="category-card__link">Découvrir ↗</span></span></a><a class="category-card category-card--avis col-12 col-sm-6 col-xl-3" href="./avis.html"><span class="category-card__rating" aria-hidden="true">★★★★★</span><span class="category-card__content"><span class="category-card__index">04 / VOS IMPRESSIONS</span><strong>Avis</strong><span>Exemples fictifs pour cette démo</span><span class="category-card__link">Lire les avis ↗</span></span></a>
       </nav>
     </main>
     <footer class="site-footer">

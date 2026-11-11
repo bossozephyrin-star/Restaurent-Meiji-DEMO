@@ -20,34 +20,34 @@
     </header>
     <main>
       <section class="hero" id="accueil" aria-labelledby="hero-title">
+        <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="./assets/img/hero-sushi-poster.jpg"
+          aria-hidden="true"
+          tabindex="-1"
+        >
+          <source src="./assets/video/hero-sushi.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__shade" aria-hidden="true">
+        </div>
         <div class="hero__content">
           <p class="hero__eyebrow" lang="en">
             Japanese Food &amp; Sushi Bar
           </p>
           <h1 id="hero-title">
-            <img src="./assets/img/meiji-wordmark.png" alt="Meiji" width="272" height="91" />
+            <img src="./assets/img/meiji-wordmark.png" alt="Meiji" />
           </h1>
           <p class="hero__subtitle">
             Sushi &amp; Grill
           </p>
           <div class="hero__actions">
-            <a class="hero__button hero__button--primary" href="./menu.html">Découvrir le menu</a><a class="hero__button hero__button--secondary" href="#contact">Nous trouver</a>
+            <a class="hero__button hero__button--primary" href="./menu.html">Découvrir notre menu</a><a class="hero__button hero__button--secondary" href="#contact">Nous trouver</a>
           </div>
-        </div>
-        <div class="hero__media">
-          <video
-            class="hero__video"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-            poster="./assets/img/hero-sushi-poster.jpg"
-            aria-hidden="true"
-            tabindex="-1"
-          >
-            <source src="./assets/video/hero-sushi.mp4" type="video/mp4" />
-          </video>
         </div>
       </section>
     </main>
