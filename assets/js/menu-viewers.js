@@ -15,6 +15,7 @@ document.querySelectorAll("[data-ouvrir-viewer]").forEach((button) => {
   }
 
   button.addEventListener("click", () => {
+    button.closest(".dish-card").classList.add("is-viewing-3d");
     button.hidden = true;
     viewer.hidden = false;
     backButton.hidden = false;
@@ -44,6 +45,7 @@ document.querySelectorAll("[data-ouvrir-viewer]").forEach((button) => {
   });
 
   backButton.addEventListener("click", () => {
+    button.closest(".dish-card").classList.remove("is-viewing-3d");
     viewer.hidden = true;
     backButton.hidden = true;
     status.hidden = true;

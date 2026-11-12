@@ -256,20 +256,6 @@ a:focus-visible, button:focus-visible {
   font-size: .82rem;
   font-weight: 700
 }
-.category-card--hookah {
-  background: radial-gradient(ellipse at 80% 15%,rgb(211 100 50 / 25%),transparent 39%), repeating-radial-gradient(ellipse at 50% 0%,transparent 0 9px,rgb(234 216 204 / 6%) 10px 11px,transparent 12px 23px), linear-gradient(135deg,#353d25,#171e14)
-}
-.category-card--hookah:before {
-  position: absolute;
-  z-index: -1;
-  right: .5rem;
-  bottom: -5.5rem;
-  color: rgb(255 255 255 / 8%);
-  content: "M";
-  font-family: "Wanoquin", "Cormorant Garamond", Georgia, serif;
-  font-size: 24rem;
-  line-height: 1
-}
 .category-card--avis {
   background: linear-gradient(140deg,#5b1213,#200a0b 70%)
 }
@@ -291,12 +277,6 @@ a:focus-visible, button:focus-visible {
 }
 .page-heading--reviews:before {
   background-position: center 75%
-}
-.page-heading--hookah {
-  background: radial-gradient(ellipse at 75% 20%,rgb(211 100 50 / 22%),transparent 40%), repeating-radial-gradient(ellipse at 50% 0%,transparent 0 9px,rgb(234 216 204 / 6%) 10px 11px,transparent 12px 23px), linear-gradient(125deg,#353d25,#171e14)
-}
-.page-heading--hookah:after {
-  background: linear-gradient(90deg,rgb(32 10 11 / 48%),rgb(32 10 11 / 12%))
 }
 .subcat-nav {
   position: sticky;
@@ -590,7 +570,7 @@ model-viewer {
   place-items: center;
   overflow: hidden;
   color: var(--paper);
-  background: var(--forest-deep) url("../assets/img/hero-sushi-poster.jpg") center/cover;
+  background: var(--forest-deep) url("../assets/img/hero-nigiri-poster.jpg") center/cover;
   text-align: center
 }
 .hero__video, .hero__shade {
@@ -775,8 +755,6 @@ body {
   background: linear-gradient(90deg, rgb(23 30 20 / 88%), rgb(32 10 11 / 45%) 65%, rgb(32 10 11 / 24%))
 }
 .category-grid {
-  --bs-gutter-x: 1rem;
-  --bs-gutter-y: 1rem;
   margin-top: 1.25rem
 }
 .category-card {
@@ -804,11 +782,6 @@ body {
   margin-top: 1.2rem;
   color: var(--cream);
   letter-spacing: .06em
-}
-.category-card--hookah::before {
-  right: -1.5rem;
-  bottom: -7rem;
-  color: rgb(234 216 204 / 9%)
 }
 .category-card__rating {
   z-index: 1;

@@ -1,10 +1,12 @@
-Vidéo de fond : Drizzling a Dish of Salmon with Liquid Sauces, cottonbro studio, Pexels
-Page source : https://www.pexels.com/video/drizzling-a-dish-of-salmon-with-liquid-sauces-3296569/
+Vidéo de fond : Close Up Video of a Nigiri Sushi, Bonus Studio, Pexels
+Page source : https://www.pexels.com/video/close-up-video-of-a-nigiri-sushi-5789846/
 Licence : https://www.pexels.com/legal-pages/license/
-Téléchargée localement pour le site Meiji Demo (version 1366 × 720, 50 i/s).
+Téléchargée localement pour le site Meiji Demo.
 
 Logo : extrait du site officiel https://menu-meiji.itech.cg/
 
-Vidéo optimisée localement avec FFmpeg : extrait de 16 s à 27,5 s, H.264,
-1280 × 720, 25 i/s, sans audio, CRF 30, +faststart.
-Image d'attente (assets/img/hero-sushi-poster.jpg) : image extraite de la même vidéo.
+Vidéo optimisée localement avec FFmpeg : H.264, 1280 × 720, sans audio, CRF 27.
+
+Image d’attente de l’accueil : assets/img/hero-nigiri-poster.jpg, extraite de cette vidéo.
+Image des rubriques du menu : assets/img/hero-sushi-poster.jpg, conservée de la vidéo Drizzling a Dish of Salmon with Liquid Sauces, cottonbro studio, Pexels.
+Source de cette image : https://www.pexels.com/video/drizzling-a-dish-of-salmon-with-liquid-sauces-3296569/

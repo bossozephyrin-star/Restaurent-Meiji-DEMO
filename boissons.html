@@ -8,7 +8,6 @@
     <title>
       Boissons | Meiji Sushi &amp; Grill
     </title>
-    <link rel="stylesheet" href="./assets/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <script type="module" src="./assets/js/model-viewer-4.4.0.min.js">
     </script>
@@ -16,6 +15,7 @@
     </script>
       <link rel="stylesheet" href="./css/refinements.css">
     <script type="module" src="./assets/js/site.js"></script>
+      <script type="module" src="./assets/js/menu-layout.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -24,10 +24,8 @@
         <a href="./index.html">Accueil</a><a href="./menu.html" aria-current="page">Menu</a><a href="./index.html#contact">Contact</a>
       </nav>
     </header>
-    <nav class="category-nav" aria-label="Rubriques du menu">
-      <a href="./plats.html">Mes plats</a><a class="is-current" href="./boissons.html" aria-current="page">Boissons</a><a href="./hookah.html">Hookah</a><a href="./avis.html">Avis</a>
-    </nav>
-    <main class="page-shell container">
+    <nav class="category-nav" aria-label="Rubriques du menu"><a href="./plats.html">Mes plats</a><a href="./boissons.html" class="is-current" aria-current="page">Boissons</a><a href="./avis.html">Avis</a></nav>
+    <main class="page-shell" data-menu-layout="grid">
       <header class="page-heading page-heading--drinks">
         <p class="eyebrow">
           Au comptoir
@@ -39,17 +37,24 @@
           Cocktails de démonstration. Les recettes et les noms restent à confirmer.
         </p>
       </header>
+      <div class="menu-toolbar">
+        <span id="layout-label">Affichage</span>
+        <div class="layout-switch" role="group" aria-labelledby="layout-label">
+          <button type="button" data-layout="grid" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Grille</button>
+          <button type="button" data-layout="list" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="4" width="5" height="6" rx="1"/><path d="M12 5h9M12 9h7"/><rect x="3" y="14" width="5" height="6" rx="1"/><path d="M12 15h9M12 19h7"/></svg>Liste</button>
+        </div>
+      </div>
       <section class="menu-section">
-        <div class="drink-grid row g-4">
-          <article class="dish-card drink-card col-12 col-md-6">
-            <button class="dish-preview" type="button" aria-label="Voir le cocktail Soleil en 3D" aria-controls="viewer-cocktail-soleil" data-ouvrir-viewer>
+        <div class="drink-grid">
+          <article class="dish-card drink-card">
+            <div class="dish-card__media"><button class="dish-preview" type="button" aria-label="Voir le cocktail Soleil en 3D" aria-controls="viewer-cocktail-soleil" data-ouvrir-viewer>
               <img src="./assets/img/boissons/cocktail-soleil.jpg" alt="Cocktail orange et rouge avec agrumes et menthe" width="720" height="1080" loading="lazy"><span>Voir en 3D ↗</span>
             </button>
             <model-viewer camera-orbit="0deg 60deg 120%" min-camera-orbit="auto auto 90%" max-camera-orbit="auto auto 220%" id="viewer-cocktail-soleil" src="./assets/models/cocktail-soleil.glb?v=scale-1" alt="Verre de cocktail aux agrumes en 3D" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden>
             </model-viewer>
             <button class="viewer-retour" type="button" data-fermer-viewer="viewer-cocktail-soleil" hidden>
               Revoir la photo
-            </button>
+            </button></div>
             <div class="dish-card__copy">
               <p class="dish-card__kicker">
                 Cocktail maison · Démo
@@ -65,15 +70,15 @@
               </p>
             </div>
           </article>
-          <article class="dish-card drink-card col-12 col-md-6">
-            <button class="dish-preview" type="button" aria-label="Voir le cocktail Orange en 3D" aria-controls="viewer-cocktail-orange" data-ouvrir-viewer>
+          <article class="dish-card drink-card">
+            <div class="dish-card__media"><button class="dish-preview" type="button" aria-label="Voir le cocktail Orange en 3D" aria-controls="viewer-cocktail-orange" data-ouvrir-viewer>
               <img src="./assets/img/boissons/cocktail-orange.jpg" alt="Cocktail orange garni d’une rondelle d’orange et de menthe" width="720" height="1080" loading="lazy"><span>Voir en 3D ↗</span>
             </button>
             <model-viewer camera-orbit="0deg 60deg 120%" min-camera-orbit="auto auto 90%" max-camera-orbit="auto auto 220%" id="viewer-cocktail-orange" src="./assets/models/cocktail-orange.glb?v=scale-1" alt="Verre de cocktail à l’orange en 3D" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden>
             </model-viewer>
             <button class="viewer-retour" type="button" data-fermer-viewer="viewer-cocktail-orange" hidden>
               Revoir la photo
-            </button>
+            </button></div>
             <div class="dish-card__copy">
               <p class="dish-card__kicker">
                 Cocktail maison · Démo

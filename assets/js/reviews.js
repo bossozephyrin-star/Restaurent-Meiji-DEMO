@@ -4,7 +4,7 @@ const status = document.getElementById('review-status');
 const list = document.getElementById('visitor-reviews');
 const listState = document.getElementById('reviews-state');
 const submit = form.querySelector('button[type="submit"]');
-const configured = /^https:\/\//.test(reviewsConfig.url) && Boolean(reviewsConfig.publishableKey);
+const configured = reviewsConfig.enabled === true && /^https:\/\//.test(reviewsConfig.url) && Boolean(reviewsConfig.publishableKey);
 function headers() { return { apikey: reviewsConfig.publishableKey, 'Content-Type': 'application/json' }; }
 function endpoint(query = '') { return reviewsConfig.url.replace(/\/$/, '') + '/rest/v1/reviews' + query; }
 function renderReview(review) {
@@ -40,4 +40,4 @@ form.addEventListener('submit', async (event) => {
   } catch { status.textContent = 'L’envoi n’a pas pu être confirmé. Votre texte est conservé dans le formulaire ; réessayez plus tard.'; }
   finally { submit.disabled = false; }
 });
-if (configured) { submit.disabled = false; status.textContent = ''; loadReviews(); }
+if (configured) { form.querySelector('[data-review-fields]').disabled = false; submit.disabled = false; status.textContent = ''; loadReviews(); }

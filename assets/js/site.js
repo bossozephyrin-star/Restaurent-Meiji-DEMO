@@ -15,7 +15,7 @@ document.addEventListener('click', (event) => {
   if (navigating) return;
   navigating = true;
   document.body.classList.add('page-is-leaving');
-  window.setTimeout(() => location.assign(target.href), 650);
+  window.setTimeout(() => location.assign(target.href), 250);
 });
 window.addEventListener('pageshow', () => { navigating = false; document.body.classList.remove('page-is-leaving'); });
 document.querySelectorAll('[data-share-menu]').forEach((button) => {

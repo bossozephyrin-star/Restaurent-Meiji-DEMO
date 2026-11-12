@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Partagez votre avis sur la démo Meiji Sushi & Grill." />
+    <meta name="description" content="Présentation des avis pour la démo Meiji Sushi & Grill." />
     <meta name="robots" content="noindex, nofollow" />
     <title>
       Avis | Meiji Sushi &amp; Grill
     </title>
-    <link rel="stylesheet" href="./assets/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
       <link rel="stylesheet" href="./css/refinements.css">
     <script type="module" src="./assets/js/site.js"></script>
@@ -21,9 +20,7 @@
         <a href="./index.html">Accueil</a><a href="./menu.html" aria-current="page">Menu</a><a href="./index.html#contact">Contact</a>
       </nav>
     </header>
-    <nav class="category-nav" aria-label="Rubriques du menu">
-      <a href="./plats.html">Mes plats</a><a href="./boissons.html">Boissons</a><a href="./hookah.html">Hookah</a><a class="is-current" href="./avis.html" aria-current="page">Avis</a>
-    </nav>
+    <nav class="category-nav" aria-label="Rubriques du menu"><a href="./plats.html">Mes plats</a><a href="./boissons.html">Boissons</a><a href="./avis.html" class="is-current" aria-current="page">Avis</a></nav>
     <main class="page-shell">
       <header class="page-heading page-heading--reviews">
         <p class="eyebrow">
@@ -33,13 +30,14 @@
           Avis
         </h1>
         <p>
-          Un mot sur votre expérience.
+          Une présentation à valider avec le restaurant.
         </p>
       </header>
 <section class="review-compose" aria-labelledby="review-title">
         <div><p class="eyebrow">Votre expérience</p><h2 id="review-title">Laisser un avis</h2>
-        <p>Choisissez une note et racontez votre expérience.</p></div>
+        <p>Le recueil des avis est fermé pour cette démo. Son ouverture sera décidée avec le chef.</p></div>
         <form id="review-form" aria-describedby="review-notice">
+          <fieldset class="review-fields" data-review-fields disabled>
           <label for="review-name">Votre prénom ou pseudo</label>
           <input id="review-name" name="display_name" autocomplete="nickname" minlength="2" maxlength="60" required>
           <fieldset class="rating-field"><legend>Votre note</legend><div class="rating-options">
@@ -49,12 +47,13 @@
           <textarea id="review-comment" name="comment" rows="4" minlength="10" maxlength="1200" required></textarea>
           <p id="review-notice" class="form-note">Votre pseudo, votre note et votre commentaire seront visibles par tous après validation. <a href="./confidentialite.html">Confidentialité</a></p>
           <button class="form-submit" type="submit" disabled>Envoyer mon avis</button>
-          <p id="review-status" role="status">L’envoi des avis sera disponible dès l’activation du service.</p>
+          </fieldset>
+          <p id="review-status" role="status">Les avis ne sont pas collectés pendant la présentation de cette démo.</p>
         </form>
       </section>
       <section class="visitor-reviews" aria-labelledby="visitor-reviews-title">
         <h2 id="visitor-reviews-title">Vos avis</h2>
-        <p id="reviews-state" role="status">Les avis partagés seront affichés ici.</p>
+        <p id="reviews-state" role="status">La publication des avis reste fermée.</p>
         <div class="review-grid" id="visitor-reviews"></div>
       </section>
       <details class="review-examples"><summary>Exemples de présentation de la démo</summary>

@@ -1,3 +1,6 @@
 .ffmpeg-work/
 .ffmpeg-*.7z
 .ffmpeg-*.sha256
+
+# Originaux et archives locales, exclus du site publié
+/sources/

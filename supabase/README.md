@@ -1,12 +1,5 @@
-# Avis partagés
+# Avis fermés pour la démo
 
-1. Appliquer reviews.sql dans le projet Supabase choisi.
-2. Renseigner son URL et sa clé publique publishable dans assets/js/reviews-config.js.
-3. Vérifier avec deux navigateurs que seuls les avis approuvés sont publics.
+La collecte reste désactivée : enabled vaut false dans assets/js/reviews-config.js et le formulaire est désactivé dans le HTML. Le schéma SQL ne donne aucun droit INSERT public.
 
-Les avis arrivent avec le statut pending. Dans le Table Editor Supabase, passer un avis à approved pour le publier ou rejected pour le masquer.
-Les visiteurs peuvent envoyer un avis et lire les avis approuvés. Ils ne peuvent pas modifier, supprimer ou approuver les avis.
-Ne jamais placer une clé secrète ou service_role dans le site.
-
-
-Avant activation, renseigner dans confidentialite.html le contact du responsable des avis de cette démo et vérifier les règles d’accès sur la base réelle.
+Avant toute ouverture, convenir avec le chef du responsable de la modération, du contact pour les demandes et d’une protection contre les envois en rafale côté serveur. Une limitation en JavaScript seule ne suffit pas. Préparer ensuite une migration pour ouvrir les écritures protégées et renseigner le contact de la démo dans confidentialite.html.
