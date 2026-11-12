@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Exemples d’avis affichés sur la démo Meiji Sushi & Grill." />
+    <meta name="description" content="Partagez votre avis sur la démo Meiji Sushi & Grill." />
     <meta name="robots" content="noindex, nofollow" />
     <title>
       Avis | Meiji Sushi &amp; Grill
     </title>
     <link rel="stylesheet" href="./assets/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
+      <link rel="stylesheet" href="./css/refinements.css">
+    <script type="module" src="./assets/js/site.js"></script>
+      <script type="module" src="./assets/js/reviews.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -30,9 +33,31 @@
           Avis
         </h1>
         <p>
-          Quelques exemples de présentation pour cette démo.
+          Un mot sur votre expérience.
         </p>
       </header>
+<section class="review-compose" aria-labelledby="review-title">
+        <div><p class="eyebrow">Votre expérience</p><h2 id="review-title">Laisser un avis</h2>
+        <p>Choisissez une note et racontez votre expérience.</p></div>
+        <form id="review-form" aria-describedby="review-notice">
+          <label for="review-name">Votre prénom ou pseudo</label>
+          <input id="review-name" name="display_name" autocomplete="nickname" minlength="2" maxlength="60" required>
+          <fieldset class="rating-field"><legend>Votre note</legend><div class="rating-options">
+          <label class="rating-option"><input type="radio" name="rating" value="1" required><span aria-hidden="true">1 <svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 7 .9-5.1 5 1.2 7-6.2-3.3-6.2 3.3 1.2-7-5.1-5 7-.9Z"/></svg></span><span class="visually-hidden">1 étoile sur 5</span></label><label class="rating-option"><input type="radio" name="rating" value="2" required><span aria-hidden="true">2 <svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 7 .9-5.1 5 1.2 7-6.2-3.3-6.2 3.3 1.2-7-5.1-5 7-.9Z"/></svg></span><span class="visually-hidden">2 étoiles sur 5</span></label><label class="rating-option"><input type="radio" name="rating" value="3" required><span aria-hidden="true">3 <svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 7 .9-5.1 5 1.2 7-6.2-3.3-6.2 3.3 1.2-7-5.1-5 7-.9Z"/></svg></span><span class="visually-hidden">3 étoiles sur 5</span></label><label class="rating-option"><input type="radio" name="rating" value="4" required><span aria-hidden="true">4 <svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 7 .9-5.1 5 1.2 7-6.2-3.3-6.2 3.3 1.2-7-5.1-5 7-.9Z"/></svg></span><span class="visually-hidden">4 étoiles sur 5</span></label><label class="rating-option"><input type="radio" name="rating" value="5" required><span aria-hidden="true">5 <svg viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 7 .9-5.1 5 1.2 7-6.2-3.3-6.2 3.3 1.2-7-5.1-5 7-.9Z"/></svg></span><span class="visually-hidden">5 étoiles sur 5</span></label>
+          </div></fieldset>
+          <label for="review-comment">Votre avis</label>
+          <textarea id="review-comment" name="comment" rows="4" minlength="10" maxlength="1200" required></textarea>
+          <p id="review-notice" class="form-note">Votre pseudo, votre note et votre commentaire seront visibles par tous après validation. <a href="./confidentialite.html">Confidentialité</a></p>
+          <button class="form-submit" type="submit" disabled>Envoyer mon avis</button>
+          <p id="review-status" role="status">L’envoi des avis sera disponible dès l’activation du service.</p>
+        </form>
+      </section>
+      <section class="visitor-reviews" aria-labelledby="visitor-reviews-title">
+        <h2 id="visitor-reviews-title">Vos avis</h2>
+        <p id="reviews-state" role="status">Les avis partagés seront affichés ici.</p>
+        <div class="review-grid" id="visitor-reviews"></div>
+      </section>
+      <details class="review-examples"><summary>Exemples de présentation de la démo</summary>
       <section class="review-grid" aria-label="Exemples fictifs d’avis">
         <article class="review-card">
           <p class="review-stars" role="img" aria-label="5 étoiles sur 5">
@@ -71,21 +96,20 @@
       <p class="demo-note demo-note--center">
         Avis fictifs de démonstration, non attribués à de vrais clients.
       </p>
+      </details>
     </main>
-    <footer class="site-footer">
+    <footer class="site-footer" id="contact">
       <div class="site-footer__content">
-        <h2>
-          Nous trouver
-        </h2>
-        <address>
-          Meiji Sushi &amp; Grill<br />Centre ville, vers la Cathédrale Sacré-Cœur<br />Brazzaville
-        </address>
-        <p>
-          <a href="tel:+242069387668">06.938.76.68</a>
-        </p>
-        <p class="site-footer__notice">
-          Démo non officielle
-        </p>
+        <p class="contact-eyebrow">Meiji Sushi &amp; Grill</p>
+        <h2>Nous trouver</h2>
+        <address>Centre ville, vers la Cathédrale Sacré-Cœur<br>Brazzaville</address>
+        <a class="contact-phone" href="tel:+242069387668">+242 06 938 76 68</a>
+        <div class="contact-actions">
+          <a class="contact-button" href="tel:+242069387668">Nous appeler</a>
+          <button class="contact-button contact-button--outline" type="button" data-share-menu>Partager le menu</button>
+        </div>
+        <p class="share-feedback" data-share-feedback role="status"></p>
+        <p class="site-footer__notice">Démo non officielle · <a href="./confidentialite.html">Confidentialité</a></p>
       </div>
     </footer>
   </body>

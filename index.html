@@ -10,6 +10,8 @@
     </title>
     <link rel="stylesheet" href="./assets/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
+      <link rel="stylesheet" href="./css/refinements.css">
+    <script type="module" src="./assets/js/site.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -53,18 +55,16 @@
     </main>
     <footer class="site-footer" id="contact">
       <div class="site-footer__content">
-        <h2>
-          Nous trouver
-        </h2>
-        <address>
-          Meiji Sushi &amp; Grill<br />Centre ville, vers la Cathédrale Sacré-Cœur<br />Brazzaville
-        </address>
-        <p>
-          <a href="tel:+242069387668">06.938.76.68</a>
-        </p>
-        <p class="site-footer__notice">
-          Démo non officielle
-        </p>
+        <p class="contact-eyebrow">Meiji Sushi &amp; Grill</p>
+        <h2>Nous trouver</h2>
+        <address>Centre ville, vers la Cathédrale Sacré-Cœur<br>Brazzaville</address>
+        <a class="contact-phone" href="tel:+242069387668">+242 06 938 76 68</a>
+        <div class="contact-actions">
+          <a class="contact-button" href="tel:+242069387668">Nous appeler</a>
+          <button class="contact-button contact-button--outline" type="button" data-share-menu>Partager le menu</button>
+        </div>
+        <p class="share-feedback" data-share-feedback role="status"></p>
+        <p class="site-footer__notice">Démo non officielle · <a href="./confidentialite.html">Confidentialité</a></p>
       </div>
     </footer>
   </body>
