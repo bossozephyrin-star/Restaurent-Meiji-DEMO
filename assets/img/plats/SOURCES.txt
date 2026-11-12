@@ -11,3 +11,6 @@ https://www.pexels.com/photo/sushi-rolls-on-black-surface-12878170/
 
 Meiji Langouste et Yakisoba Boeuf : photos et modèles 3D fournis dans le dossier Nouveau dossier de la démo.
 Noms, ingrédients et prix relevés sur le menu officiel : https://menu-meiji.itech.cg/
+
+Modèles 3D Tokyo, Meiji Langouste et Yakisoba Boeuf allégés avec gltf-transform :
+textures réduites à 1024 px et converties en JPEG, géométrie et échelle inchangées.
