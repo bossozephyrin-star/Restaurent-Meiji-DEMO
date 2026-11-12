@@ -9,8 +9,8 @@ if (menu && layoutButtons.length) {
       button.setAttribute("aria-pressed", String(button.dataset.layout === layout));
     });
   }
-  let savedLayout = "grid";
-  try { savedLayout = localStorage.getItem(preferenceKey) || "grid"; } catch {}
+  let savedLayout = window.matchMedia("(max-width: 43.99rem)").matches ? "list" : "grid";
+  try { savedLayout = localStorage.getItem(preferenceKey) || savedLayout; } catch {}
   setLayout(savedLayout);
   layoutButtons.forEach((button) => {
     button.addEventListener("click", () => {

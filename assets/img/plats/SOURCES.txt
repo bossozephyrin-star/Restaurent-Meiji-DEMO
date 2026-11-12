@@ -1,3 +1,16 @@
+Photos ajoutées depuis le menu officiel Meiji, le 12 novembre 2026.
+Menu : https://menu-meiji.itech.cg/
+
+Sashimi Saumon ou Tataki : 8 000 FCFA
+https://assets.zyrosite.com/03xmircITXpNczFX/whatsapp-image-2026-05-06-at-18.35.35-EcUogxf4ch7fMvuK.jpeg
+
+Nigiri Saumon ou Tataki : 3 500 FCFA (2 pièces). Le site utilise une photo de présentation de plusieurs nigiri.
+https://assets.zyrosite.com/03xmircITXpNczFX/whatsapp-image-2026-04-24-at-15.42.18-1MiGb6FvgvMExeWh.jpeg
+
+Maki Saumon : 5 000 FCFA (4 pièces). Photo commune des makis sur le menu officiel.
+https://assets.zyrosite.com/03xmircITXpNczFX/whatsapp-image-2026-05-06-at-18.54.01-vfDXeo5qXUnStsLL.jpeg
+
+Sources historiques et autres plats :
 Photos réelles téléchargées depuis Pexels, sous licence Pexels (utilisation gratuite).
 
 Sashimi : RDNE Stock project
@@ -14,3 +27,7 @@ Noms, ingrédients et prix relevés sur le menu officiel : https://menu-meiji.it
 
 Modèles 3D Tokyo, Meiji Langouste et Yakisoba Boeuf allégés avec gltf-transform :
 textures réduites à 1024 px et converties en JPEG, géométrie et échelle inchangées.
+
+Cadrages larges ajoutés à la demande du propriétaire : tokyo-large.jpg, langouste-large.jpg, sashimi-large.jpg, maki-large.jpg.
+Retouches réalisées avec le générateur intégré pour prolonger le décor autour des plats, à partir des photos ci-dessus. Les originaux sont conservés.
+Export : JPEG 1200 × 900. Détail des prompts : tools/prompts-cadrages-photos.json.

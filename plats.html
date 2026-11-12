@@ -48,7 +48,7 @@
       <div class="subcat-nav" role="tablist" aria-label="Sous-catégories des plats">
         <button type="button" id="onglet-speciaux" role="tab" aria-controls="speciaux" aria-selected="true" tabindex="0">Spéciaux</button>
         <button type="button" id="onglet-chauds" role="tab" aria-controls="chauds" aria-selected="false" tabindex="-1">Plats chauds</button>
-        <button type="button" id="onglet-entrees" role="tab" aria-controls="entrees" aria-selected="false" tabindex="-1">Entrées</button>
+        <button type="button" id="onglet-sashimi" role="tab" aria-controls="sashimi" aria-selected="false" tabindex="-1">Sashimi</button>
         <button type="button" id="onglet-nigiri" role="tab" aria-controls="nigiri" aria-selected="false" tabindex="-1">Nigiri</button>
         <button type="button" id="onglet-maki" role="tab" aria-controls="maki" aria-selected="false" tabindex="-1">Maki</button>
       </div>
@@ -65,10 +65,10 @@
                 <h3>Tokyo</h3>
                 <span class="price">10 500 FCFA</span>
               </div>
-              <p>Huit pièces de roll spécial, frites à la tempura.</p>
-              <p class="ingredients">
+              <p>Roll au saumon et au surimi, frit à la tempura.</p>
+              <details class="ingredients-details"><summary>Ingrédients</summary><p class="ingredients">
                 Algue, saumon, surimi, cheese, mayonnaise, tobiko
-              </p>
+              </p></details>
             </div>
             <div class="dish-card__media"><button
               class="dish-preview"
@@ -78,12 +78,12 @@
               data-ouvrir-viewer
             >
               <img
-                src="./assets/img/plats/tokyo-special.jpeg"
+                src="./assets/img/plats/tokyo-large.jpg"
                 alt="Huit pièces du roll Tokyo avec sauce et tobiko rouge"
-                width="720"
-                height="1080"
+                width="1200"
+                height="900"
                 loading="lazy"
-              /><span>Voir en 3D ↗</span>
+              /><span>Voir en 3D <svg class="action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
             </button>
             <model-viewer camera-orbit="0deg 60deg 120%" min-camera-orbit="auto auto 90%" max-camera-orbit="auto auto 220%"
               id="viewer-tokyo"
@@ -130,11 +130,11 @@
                 <h3>Meiji Langouste</h3>
                 <span class="price">10 000 FCFA</span>
               </div>
-              <p>Roll spécial à la langouste, accompagné de sauce spéciale.</p>
-              <p class="ingredients">
+              <p>Roll à la langouste et à l’avocat.</p>
+              <details class="ingredients-details"><summary>Ingrédients</summary><p class="ingredients">
                 Algue, langouste, avocat, cheese, surimi, tartare de langouste,
                 sauce spéciale
-              </p>
+              </p></details>
             </div>
             <div class="dish-card__media"><button
               class="dish-preview"
@@ -144,11 +144,11 @@
               data-ouvrir-viewer
             >
               <img
-                src="./assets/img/plats/meiji-langouste.jpeg"
+                src="./assets/img/plats/langouste-large.jpg"
                 alt="Meiji Langouste, roll nappé de sauce et servi avec une langouste"
-                width="810" height="1080"
+                width="1200" height="900"
                 loading="lazy"
-              /><span>Voir en 3D ↗</span>
+              /><span>Voir en 3D <svg class="action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
             </button>
             <model-viewer camera-orbit="0deg 60deg 120%" min-camera-orbit="auto auto 90%" max-camera-orbit="auto auto 220%"
               id="viewer-langouste"
@@ -207,7 +207,7 @@
                 Nouilles sautées, fines lamelles de bœuf, légumes croquants et
                 sauce yakisoba.
               </p>
-              <p class="ingredients">Nouilles, bœuf, légumes, sauce yakisoba</p>
+              <details class="ingredients-details"><summary>Ingrédients</summary><p class="ingredients">Nouilles, bœuf, légumes, sauce yakisoba</p></details>
             </div>
             <div class="dish-card__media"><button
               class="dish-preview"
@@ -222,7 +222,7 @@
                 width="1080"
                 height="720"
                 loading="lazy"
-              /><span>Voir en 3D ↗</span>
+              /><span>Voir en 3D <svg class="action-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
             </button>
             <model-viewer camera-orbit="0deg 60deg 120%" min-camera-orbit="auto auto 90%" max-camera-orbit="auto auto 220%"
               id="viewer-yakisoba"
@@ -264,30 +264,23 @@
           </article>
         </div>
       </section>
-      <section class="menu-section" id="entrees" role="tabpanel" aria-labelledby="onglet-entrees" tabindex="0" hidden>
+      <section class="menu-section" id="sashimi" role="tabpanel" aria-labelledby="onglet-sashimi" tabindex="0" hidden>
         <div class="section-heading">
-          <p class="eyebrow">Entrées</p>
-          <h2>Sashimi &amp; shirashi</h2>
+          <p class="eyebrow">Sashimi</p>
+          <h2>Sashimi</h2>
         </div>
-        <p class="sample-note">Photo d’illustration pour cette démo.</p>
         <div class="dish-grid">
           <article class="dish-card">
             <div class="dish-card__copy">
               <p class="dish-card__kicker">Sashimi</p>
               <div class="dish-card__title">
-                <h3>Sashimi saumon ou tataki</h3>
-                <span class="price price--pending">Prix à définir</span>
+                <h3>Sashimi Saumon ou Tataki</h3>
+                <span class="price">8 000 FCFA</span>
               </div>
-              <p>Tranches fines, gingembre et wasabi.</p>
-              <p class="ingredients">Saumon frais ou tataki</p>
+              <p>Tranches de saumon frais ou tataki.</p>
+              <details class="ingredients-details"><summary>Ingrédients</summary><p class="ingredients">Saumon frais ou tataki</p></details>
             </div>
-            <div class="dish-card__media"><div class="dish-photo"><img
-                src="./assets/img/plats/sashimi.jpg"
-                alt="Tranches de sashimi de saumon"
-                width="1200"
-                height="800"
-                loading="lazy"
-              /></div></div>
+            <div class="dish-card__media"><div class="dish-photo"><img src="./assets/img/plats/sashimi-large.jpg" alt="Sashimi de saumon présenté sur le menu Meiji" width="1200" height="900" loading="lazy"></div></div>
 
           </article>
         </div>
@@ -297,25 +290,18 @@
           <p class="eyebrow">Sushi</p>
           <h2>Nigiri</h2>
         </div>
-        <p class="sample-note">Photo d’illustration pour cette démo.</p>
         <div class="dish-grid">
           <article class="dish-card">
             <div class="dish-card__copy">
               <p class="dish-card__kicker">Nigiri × 2</p>
               <div class="dish-card__title">
-                <h3>Nigiri saumon ou tataki</h3>
-                <span class="price price--pending">Prix à définir</span>
+                <h3>Nigiri Saumon ou Tataki</h3>
+                <span class="price">3 500 FCFA</span>
               </div>
-              <p>Deux pièces à déguster en une bouchée.</p>
-              <p class="ingredients">Saumon, riz vinaigré</p>
+              <p>Deux pièces de saumon frais ou tataki.</p>
+              <details class="ingredients-details"><summary>Ingrédients</summary><p class="ingredients">Saumon, riz vinaigré</p></details>
             </div>
-            <div class="dish-card__media"><div class="dish-photo"><img
-                src="./assets/img/plats/nigiri.jpg"
-                alt="Nigiri au saumon"
-                width="1200"
-                height="1800"
-                loading="lazy"
-              /></div></div>
+            <div class="dish-card__media"><div class="dish-photo"><img src="./assets/img/plats/nigiri-meiji.jpeg" alt="Assortiment de nigiri présenté sur le menu Meiji" width="1280" height="960" loading="lazy"></div></div>
 
           </article>
         </div>
@@ -325,25 +311,18 @@
           <p class="eyebrow">Sushi</p>
           <h2>Maki</h2>
         </div>
-        <p class="sample-note">Photo d’illustration pour cette démo.</p>
         <div class="dish-grid">
           <article class="dish-card">
             <div class="dish-card__copy">
               <p class="dish-card__kicker">Maki × 4</p>
               <div class="dish-card__title">
-                <h3>Maki crevette</h3>
-                <span class="price price--pending">Prix à définir</span>
+                <h3>Maki Saumon</h3>
+                <span class="price">5 000 FCFA</span>
               </div>
-              <p>Quatre pièces roulées dans une feuille de nori.</p>
-              <p class="ingredients">Crevette, avocat, concombre</p>
+              <p>Quatre pièces au saumon et à l’avocat.</p>
+              <details class="ingredients-details"><summary>Ingrédients</summary><p class="ingredients">Saumon, avocat, concombre, algue</p></details>
             </div>
-            <div class="dish-card__media"><div class="dish-photo"><img
-                src="./assets/img/plats/maki.jpg"
-                alt="Maki servis sur une assiette"
-                width="1200"
-                height="900"
-                loading="lazy"
-              /></div></div>
+            <div class="dish-card__media"><div class="dish-photo"><img src="./assets/img/plats/maki-large.jpg" alt="Quatre makis au saumon et à l’avocat du menu Meiji" width="1200" height="900" loading="lazy"></div></div>
 
           </article>
         </div>

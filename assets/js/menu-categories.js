@@ -44,7 +44,8 @@ if (categoryTabs.length) {
   });
 
   function showCategoryFromUrl() {
-    showCategory(location.hash.slice(1));
+    const category = location.hash.slice(1);
+    showCategory(category === "entrees" ? "sashimi" : category);
   }
 
   window.addEventListener("popstate", showCategoryFromUrl);

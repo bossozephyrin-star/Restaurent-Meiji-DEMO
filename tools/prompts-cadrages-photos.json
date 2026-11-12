@@ -1,0 +1,37 @@
+{
+  "mode": "builtin image_gen, edit",
+  "purpose": "Cadrages larges pour les cartes de la démo Meiji ; photos d’origine conservées.",
+  "export": "JPEG 1200 × 900, FFmpeg q:v 3",
+  "images": [
+    {
+      "source": "assets/img/plats/tokyo-special.jpeg",
+      "output": "assets/img/plats/tokyo-large.jpg",
+      "prompt": "Edit target: the supplied real photograph of Meiji's Tokyo sushi roll on a long white rectangular plate. Make a clean photorealistic LANDSCAPE 4:3 image for a restaurant menu card by OUTPAINTING THE BACKGROUND ONLY. Preserve the entire original central photograph unchanged, including the precise sushi pieces, red roe, sauces, leaf, parsley, ginger, plate, sauce bowl and green bottle, original perspective, original color and lighting. Extend the photographed pale woven table surface naturally to the left and right so the canvas is filled edge to edge with real-looking surroundings, never a solid-color band. Keep the complete long plate visible. The dish should remain the clear focal point and occupy most of the frame, with modest breathing room. Do not add, remove, replace, rotate, redesign or regenerate any food. Do not add dishes, extra sushi pieces, cutlery, text, logos, captions, watermarks, borders, vignettes or decorative graphics. Continuity must be seamless and believable. Output exactly one finished photograph, landscape aspect ratio 4:3."
+    },
+    {
+      "source": "assets/img/plats/meiji-langouste.jpeg",
+      "output": "assets/img/plats/langouste-large.jpg",
+      "prompt": "Edit target: this real Meiji Langouste restaurant photograph. Produce one clean photorealistic LANDSCAPE 4:3 food photograph by seamlessly OUTPAINTING the background of the supplied portrait image. Keep the original lobster roll, exact sushi pieces, curved arrangement, sauces, lobster shell, white rectangular plate, parsley, ginger, wasabi and chopsticks faithful to the reference. Preserve the entire plate and food, original camera angle, texture and warm photographic lighting. Extend only the existing dark wood table and pale woven placemats naturally left and right until the photo fills the new canvas edge to edge. Keep the plate centered and prominent with modest breathing room. No new food or ingredients, no invented garnish, no extra plates, no new props, no changes to food styling, no words or logos, no borders or solid sidebars. One single finished natural photograph, not a montage."
+    },
+    {
+      "source": "assets/img/plats/sashimi-meiji.jpeg",
+      "output": "assets/img/plats/sashimi-large.jpg",
+      "prompt": "Edit target: this real Meiji sashimi photograph. Create one seamless LANDSCAPE 4:3 photograph for a premium restaurant menu card by outpainting the surrounding scene. Preserve the exact salmon slices, their number and arrangement, the ice, the black bowl, cucumber, greenery, yellow flower and small wooden screen as shown. Keep the original food photographic appearance, perspective, orange salmon color and warm restaurant lighting. Extend the existing dark brown restaurant tabletop and soft shadowed background on the sides so there are no flat color bands. Reframe the canvas so the bowl remains clearly visible and prominent, with the salmon the focal point. Do not invent any food, cutlery, extra garnish, additional dishes, text, logo, border or watermark. No stylization or illustration, no excessive blur. Only natural coherent photographic background expansion."
+    },
+    {
+      "source": "assets/img/plats/maki-meiji.jpeg",
+      "output": "assets/img/plats/maki-large.jpg",
+      "prompt": "Edit target: the provided real photograph of four salmon and avocado maki on a green leaf and dark slate platter. Extend this portrait photograph into a seamless LANDSCAPE 4:3 restaurant menu photograph. Preserve exactly four maki, the salmon/avocado/rice/nori appearance and arrangement, the leaf, original black serving platter, original viewpoint and lighting. Outpaint the existing dark tabletop and natural slate textures at the sides. Keep the four maki prominent in the center-lower part but with the complete serving visible, not cropped. Do not add pieces or ingredients. Do not add new garnish, props, cutlery, dishes, lettering, marks, logos, borders or sidebars. The result must be a single coherent realistic food photo filling the canvas edge to edge. No redesign of the food."
+    },
+    {
+      "source": "assets/img/boissons/cocktail-soleil.jpg",
+      "output": "assets/img/boissons/cocktail-soleil-large.jpg",
+      "prompt": "Edit target: this real photograph of a tall clear faceted glass with an orange-to-red cocktail and orange peel/mint garnish on a wooden table. Create a seamless LANDSCAPE 4:3 photograph by outpainting the existing scene to left and right. Keep the entire glass, exact color layers, ice, orange peel, mint leaves, rim and base unchanged and clearly visible, maintaining the original eye-level viewpoint and soft restaurant lighting. Extend the existing wooden tabletop and subtle defocused pale blue and warm brown restaurant background naturally, without adding identifiable objects. Center the glass prominently, leave a modest amount of headroom, and fill the entire canvas with photographic background. No new ingredients, extra drinks, hands, people, labels, text, logos, borders, flat bands or artificial gradients. Natural photographic continuation only."
+    },
+    {
+      "source": "assets/img/boissons/cocktail-orange.jpg",
+      "output": "assets/img/boissons/cocktail-orange-large.jpg",
+      "prompt": "Edit target: this real restaurant photograph of a yellow-orange cocktail with ice, a fresh orange wheel and mint, and exactly the two existing bent straws. Create one seamless LANDSCAPE 4:3 photo by extending the surrounding background left and right. Keep the exact glass silhouette, liquid, ice, orange slice, mint, foam and the two straws faithful to the photo, fully visible and not cropped. Preserve the original warm dramatic lighting, near-black soft background, perspective and wooden tabletop. Make the glass prominent in the center, with modest headroom above the straws. Outpaint only the same dark restaurant background and tabletop so every edge of the canvas is filled with natural photographed surroundings, not flat bands. No added drinks, ingredients, garnish, utensils, people, labels, lettering, watermark, decorative elements or borders. Do not redesign the beverage. Photorealism and natural continuity are essential."
+    }
+  ]
+}

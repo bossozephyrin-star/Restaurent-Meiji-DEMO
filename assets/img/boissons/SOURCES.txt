@@ -1,1 +1,3 @@
 Photos de cocktails fournies par l’utilisateur pour la démo.
+
+Cadrages cocktail-soleil-large.jpg et cocktail-orange-large.jpg : extension du décor avec le générateur intégré, à partir des photos fournies. Originaux conservés. JPEG 1200 × 900. Prompts : tools/prompts-cadrages-photos.json.
