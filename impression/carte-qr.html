@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Carte QR à imprimer | Meiji Sushi &amp; Grill</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+      /* Carte de table au format A6 (105 × 148 mm). Imprimer à 100 %, avec les arrière-plans. */
+      @page {
+        size: 105mm 148mm;
+        margin: 0
+      }
+      html, body {
+        margin: 0;
+        background: var(--cream)
+      }
+      .qr-card {
+        display: flex;
+        width: 105mm;
+        min-height: 148mm;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 10mm 9mm 8mm;
+        color: var(--cream);
+        background: var(--forest-night);
+        text-align: center;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact
+      }
+      .qr-card__logo {
+        width: 46mm;
+        height: auto
+      }
+      .qr-card h1 {
+        margin: 0;
+        font-size: 8.5mm;
+        line-height: 1.1
+      }
+      .qr-card__lead {
+        margin: 2mm 0 0;
+        color: var(--sand);
+        font-size: 3.6mm;
+        line-height: 1.4
+      }
+      .qr-card__code {
+        width: 58mm;
+        height: 58mm;
+        padding: 2mm;
+        border-radius: 3mm;
+        background: #fff
+      }
+      .qr-card__code img {
+        display: block;
+        width: 100%;
+        height: 100%
+      }
+      .qr-card__note {
+        margin: 0;
+        color: var(--sand);
+        font-size: 2.8mm
+      }
+      .print-help {
+        max-width: 105mm;
+        margin: 6mm auto;
+        color: var(--muted);
+        font-size: .85rem;
+        text-align: center
+      }
+      @media print {
+        .print-help {
+          display: none
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="qr-card">
+      <img class="qr-card__logo" src="../assets/img/meiji-logo.png" alt="Meiji Sushi &amp; Grill">
+      <div>
+        <h1>La carte en 3D</h1>
+        <p class="qr-card__lead">Scannez ce code avec l’appareil photo de votre téléphone</p>
+      </div>
+      <div class="qr-card__code">
+        <img src="./qr-menu.svg" alt="QR code vers le menu Meiji Sushi &amp; Grill">
+      </div>
+      <p class="qr-card__note">Démo non officielle</p>
+    </main>
+    <p class="print-help">Format A6. Imprimez à 100 % en activant les arrière-plans.</p>
+  </body>
+</html>

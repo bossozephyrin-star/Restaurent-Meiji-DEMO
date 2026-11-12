@@ -43,9 +43,6 @@
 .form-note, #review-status, #reviews-state { color: var(--muted); font-size: .85rem; }
 .form-submit { justify-self: start; padding: .8rem 1.1rem; border: 0; border-radius: .65rem; background: var(--forest); color: var(--paper); font: 700 .95rem/1.4 "Roboto", Arial, sans-serif; cursor: pointer; }
 .form-submit:disabled { opacity: .55; cursor: default; }
-.review-examples { margin-top: 2.2rem; }
-.review-examples summary { cursor: pointer; color: var(--muted); }
-.review-examples .demo-note { margin-bottom: 1rem; }
 .visitor-reviews h2 { margin-bottom: .8rem; }
 .visitor-reviews .review-card blockquote { overflow-wrap: anywhere; white-space: pre-wrap; }
 .privacy-copy { max-width: 50rem; }
