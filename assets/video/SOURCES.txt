@@ -4,6 +4,8 @@ Licence : https://www.pexels.com/legal-pages/license/
 Téléchargée localement pour le site Meiji Demo.
 
 Logo : extrait du site officiel https://menu-meiji.itech.cg/
+Le 26 novembre 2026, le propriétaire du projet a confirmé dans la conversation
+avoir l'accord de Meiji pour utiliser le logo dans les démos présentées au chef.
 
 Vidéo optimisée localement avec FFmpeg : H.264, 1280 × 720, sans audio, CRF 27.
 

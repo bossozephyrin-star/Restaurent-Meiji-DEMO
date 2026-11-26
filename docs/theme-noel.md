@@ -25,7 +25,12 @@ plus tôt. Le thème n'ajoute aucune bibliothèque ni aucun script.
 - `css/theme-noel.css` : variables, focus, voiles sur les photos et animation.
 - `assets/img/noel-ornement.svg` : un SVG local réutilisé dans les deux coins.
 
-Les deux fichiers totalisent environ 4,3 Ko avant compression. Les ornements sont
+La version initiale des deux fichiers totalisait 4 310 octets avant compression.
+Après les ajustements de lisibilité et de police, ils totalisent 4 607 octets.
+Le thème charge aussi `assets/fonts/Roboto-latin-Variable.woff2` (115 844 octets)
+à la place du TTF de 488 584 octets. La copie locale sous licence OFL conserve
+les caractères latins français et les axes variables. La vérification réseau
+confirme que le TTF n'est pas téléchargé avec le thème activé. Les ornements sont
 des fonds CSS décoratifs, sans texte ni information à annoncer. Ils n'interceptent
 aucun toucher. L'animation joue une fois pendant trois secondes et utilise
 uniquement `transform` et `opacity`. `prefers-reduced-motion: reduce` la désactive.
@@ -72,6 +77,31 @@ d'une image blanche. Ces valeurs ne constituent pas un audit WCAG complet du sit
   vérifications du thème et du viewer.
 
 ## Avant de présenter la démo
+
+## Nouvelle vérification du 26 novembre 2026
+
+- Branche vérifiée : `theme-noel`. Dix tests vidéo relancés, tous réussis.
+- Bordure du bouton principal portée à 2 px pour mieux dessiner sa forme.
+- Contrôle renouvelé à 320 et 768 px : aucun débordement horizontal, ornements
+  hors des textes et du logo. À 320 px, le décor termine environ 15 px avant
+  le premier texte. Le test en plein soleil reste à faire sur appareil physique.
+- Focus doré vérifié en tabulant dans l'en-tête et en changeant les catégories
+  avec les flèches du clavier. Ouverture du modèle Tokyo vérifiée, sans erreur
+  dans la console. La réalité augmentée sur une table n'a pas été testée ici.
+- Serveur de contrôle local limité à 512 kbit/s partagés entre toutes les
+  réponses, avec 200 ms de latence et cache désactivé : premier affichage de
+  contenu à 2 392 ms, première lecture vidéo à 5 578 ms, polices prêtes à
+  9 913 ms. `font-display: swap` permet l'affichage du texte avant la fin du
+  téléchargement de la police. Ces mesures uniques sur ordinateur ne prédisent
+  pas le résultat exact d'un téléphone sur un réseau mobile.
+- L'image d'attente existante pèse 35 886 octets. La vidéo pèse 369 083 octets.
+- Source vidéo confirmée : Bonus Studio sur Pexels, vidéo 5789846. La licence
+  Pexels autorise l'utilisation et l'adaptation sur un site. Source et licence :
+  https://www.pexels.com/video/close-up-video-of-a-nigiri-sushi-5789846/
+  et https://www.pexels.com/license/.
+- L'utilisateur confirme avoir l'accord de Meiji pour le logo des démos.
+
+## Avant de présenter la démo sur téléphone
 
 Le test sur un vrai téléphone et un réseau mobile reste à effectuer : accueil,
 vidéo avec et sans économie d'énergie, menu, 3D, réduction des animations et zoom

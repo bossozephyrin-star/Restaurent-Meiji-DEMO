@@ -1,4 +1,13 @@
 /* Meiji, fêtes de fin d'année. Activation : première ligne de refinements.css. */
+/* Variante latine locale, mêmes graisses et mêmes caractères français. Licence OFL. */
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-latin-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 :root {
   --ink: #200a0b;
   --burgundy: #5b1213;
@@ -56,6 +65,7 @@
   --cream: var(--burgundy);
   --ink: var(--paper);
   border-color: var(--noel-gold);
+  border-width: 2px;
 }
 
 .site-header {
