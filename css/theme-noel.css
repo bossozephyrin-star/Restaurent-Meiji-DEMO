@@ -1,0 +1,131 @@
+/* Meiji, fêtes de fin d'année. Activation : première ligne de refinements.css. */
+:root {
+  --ink: #200a0b;
+  --burgundy: #5b1213;
+  --forest: #171e14;
+  --forest-deep: #5b1213;
+  --forest-night: #171e14;
+  --cream: #f6e8dc;
+  --paper: #fffaf4;
+  --sand: #eadbc7;
+  --rose: #eadbc7;
+  --muted: #6f554e;
+  --copper: #805c22;
+  --garnet: #5b1213;
+  --moss: #171e14;
+  --plum: #5b1213;
+  --black-forest: #0c0f0a;
+  --line: #b6a180;
+  --focus: #805c22;
+  --noel-gold: #c8a45d;
+  /* Même sur une image blanche : crème > 6:1 et focus doré > 3:1. */
+  --noel-photo-veil: rgb(23 30 20 / 76%);
+  --noel-ornament: url("../assets/img/noel-ornement.svg");
+}
+
+/* Deux couleurs de focus selon la surface, y compris les onglets sélectionnés. */
+.site-header,
+.hero,
+.site-footer,
+.menu-banner,
+.page-heading,
+.editorial-panel {
+  --focus: var(--noel-gold);
+  --copper: var(--noel-gold);
+}
+
+.hero a:focus-visible,
+.hero__video-control:focus-visible,
+.site-header a:focus-visible,
+.site-footer a:focus-visible {
+  outline-color: var(--focus);
+}
+
+.subcat-nav button[aria-selected="true"] {
+  --focus: var(--noel-gold);
+}
+
+/* Les composants conservent leurs règles ; seules leurs couleurs changent. */
+.price,
+.subcat-nav,
+.layout-switch {
+  --forest: var(--burgundy);
+}
+
+.hero .hero__button--primary {
+  --cream: var(--burgundy);
+  --ink: var(--paper);
+  border-color: var(--noel-gold);
+}
+
+.site-header {
+  border-bottom-color: var(--noel-gold);
+}
+
+.hero .hero__shade,
+.menu-banner::after,
+.page-heading::after,
+.category-card__shade {
+  background: var(--noel-photo-veil);
+}
+
+/* Décor de fond uniquement : aucune information, aucun élément HTML ajouté. */
+.hero::before,
+.hero::after {
+  position: absolute;
+  z-index: 1;
+  top: .75rem;
+  width: clamp(5.5rem, 17vw, 13rem);
+  aspect-ratio: 200 / 250;
+  content: "";
+  background: var(--noel-ornament) center / contain no-repeat;
+  pointer-events: none;
+  transform: scaleX(var(--noel-side, 1));
+  animation: noel-arrivee 3s ease-out both;
+}
+
+.hero::before {
+  left: clamp(.5rem, 2vw, 2rem);
+}
+
+.hero .hero__content {
+  z-index: 2;
+}
+
+.hero::after {
+  --noel-side: -1;
+  right: clamp(.5rem, 2vw, 2rem);
+}
+
+@keyframes noel-arrivee {
+  from {
+    opacity: 0;
+    transform: translateY(-.6rem) scaleX(var(--noel-side, 1));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleX(var(--noel-side, 1));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before,
+  .hero::after {
+    animation: none;
+  }
+}
+
+@media (max-width: 22.5rem) {
+  .hero::before,
+  .hero::after {
+    top: .5rem;
+    width: 3.75rem;
+  }
+}
+
+@media print {
+  .hero::before,
+  .hero::after {
+    display: none;
+  }
+}
