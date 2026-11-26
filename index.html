@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/style.css" />
       <link rel="stylesheet" href="./css/refinements.css">
     <script type="module" src="./assets/js/site.js"></script>
+    <script type="module" src="./assets/js/hero-video.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -20,14 +21,17 @@
       </nav>
     </header>
     <main>
-      <section class="hero" id="accueil" aria-labelledby="hero-title">
+      <section class="hero" id="accueil" aria-labelledby="hero-title" data-hero-video data-video-state="poster">
         <video
+          id="hero-video"
           class="hero__video"
           autoplay
           muted
           loop
           playsinline
-          preload="metadata"
+          webkit-playsinline
+          disablepictureinpicture
+          preload="auto"
           poster="./assets/img/hero-nigiri-poster.jpg"
           aria-hidden="true"
           tabindex="-1"
@@ -50,6 +54,12 @@
             <a class="hero__button hero__button--primary" href="./menu.html">Découvrir notre menu</a><a class="hero__button hero__button--secondary" href="#contact">Nous trouver</a>
           </div>
         </div>
+        <button class="hero__video-control" type="button" data-video-control aria-controls="hero-video" aria-label="Lire la vidéo" hidden>
+          <svg class="hero__video-play" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z" fill="currentColor" /></svg>
+          <svg class="hero__video-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zm6 0h4v14h-4z" fill="currentColor" /></svg>
+          <span data-video-label>Lire la vidéo</span>
+        </button>
+        <p class="visually-hidden" data-video-status role="status"></p>
       </section>
     </main>
     <footer class="site-footer" id="contact">

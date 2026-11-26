@@ -583,6 +583,50 @@ model-viewer {
 .hero__video {
   object-fit: cover
 }
+/* Le poster reste visible tant que Safari n'a pas réellement lancé la vidéo. */
+[data-hero-video] .hero__video {
+  opacity: 0;
+  pointer-events: none
+}
+[data-video-state="playing"] .hero__video {
+  opacity: 1
+}
+.hero__video::-webkit-media-controls-panel,
+.hero__video::-webkit-media-controls-start-playback-button {
+  display: none !important
+}
+.hero__video-control {
+  position: absolute;
+  z-index: 2;
+  right: 1rem;
+  bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  min-height: 2.75rem;
+  padding: .55rem .8rem;
+  border: 1px solid var(--cream);
+  border-radius: .8rem;
+  color: var(--cream);
+  background: var(--forest-night);
+  font: 500 .8rem/1.4 "Roboto", Arial, sans-serif;
+  cursor: pointer
+}
+.hero__video-control[hidden],
+.hero__video-pause,
+[data-video-state="playing"] .hero__video-play {
+  display: none
+}
+.hero__video-control svg {
+  width: 1rem;
+  height: 1rem
+}
+[data-video-state="playing"] .hero__video-pause {
+  display: block
+}
+.hero__video-control:focus-visible {
+  outline-color: var(--paper)
+}
 .hero__shade {
   z-index: 0;
   background: rgb(32 10 11 / 55%)
@@ -648,7 +692,7 @@ model-viewer {
   outline-color: var(--paper)
 }
 @media(prefers-reduced-motion:reduce) {
-  .hero__video {
+  .hero:not([data-video-manual]) .hero__video {
     display: none
   }
 }
