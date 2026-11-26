@@ -9,9 +9,9 @@
       Boissons | Meiji Sushi &amp; Grill
     </title>
     <link rel="stylesheet" href="./css/style.css">
-    <script type="module" src="./assets/js/model-viewer-4.4.0.min.js">
+    <script type="module" async src="./assets/js/model-viewer-4.4.0.min.js">
     </script>
-    <script type="module" src="./assets/js/menu-viewers.js">
+    <script type="module" src="./assets/js/menu-viewers.js?v=noel-2">
     </script>
       <link rel="stylesheet" href="./css/refinements.css">
     <script type="module" src="./assets/js/site.js"></script>
@@ -49,7 +49,7 @@
       <section class="menu-section">
         <div class="drink-grid">
           <article class="dish-card drink-card">
-            <div class="dish-card__media"><button class="dish-preview" type="button" aria-label="Voir le cocktail Soleil en 3D" aria-controls="viewer-cocktail-soleil" data-ouvrir-viewer>
+            <div class="dish-card__media"><button class="dish-preview" type="button" aria-label="Voir le cocktail Soleil en 3D" aria-controls="viewer-cocktail-soleil" data-ouvrir-viewer disabled>
               <img src="./assets/img/boissons/cocktail-soleil-large.jpg" alt="Cocktail orange et rouge avec agrumes et menthe" width="1200" height="900" loading="lazy"><span>Voir en 3D ↗</span>
             </button>
             <model-viewer camera-orbit="0deg 60deg 120%" min-camera-orbit="auto auto 90%" max-camera-orbit="auto auto 220%" id="viewer-cocktail-soleil" src="./assets/models/cocktail-soleil.glb?v=scale-1" alt="Verre de cocktail aux agrumes en 3D" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden>
@@ -73,7 +73,7 @@
             </div>
           </article>
           <article class="dish-card drink-card">
-            <div class="dish-card__media"><button class="dish-preview" type="button" aria-label="Voir le cocktail Orange en 3D" aria-controls="viewer-cocktail-orange" data-ouvrir-viewer>
+            <div class="dish-card__media"><button class="dish-preview" type="button" aria-label="Voir le cocktail Orange en 3D" aria-controls="viewer-cocktail-orange" data-ouvrir-viewer disabled>
               <img src="./assets/img/boissons/cocktail-orange-large.jpg" alt="Cocktail orange garni d’une rondelle d’orange et de menthe" width="1200" height="900" loading="lazy"><span>Voir en 3D ↗</span>
             </button>
             <model-viewer camera-orbit="0deg 60deg 120%" min-camera-orbit="auto auto 90%" max-camera-orbit="auto auto 220%" id="viewer-cocktail-orange" src="./assets/models/cocktail-orange.glb?v=scale-1" alt="Verre de cocktail à l’orange en 3D" camera-controls touch-action="pan-y" auto-rotate loading="lazy" hidden>

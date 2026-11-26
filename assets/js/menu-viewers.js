@@ -10,6 +10,7 @@ document.querySelectorAll("[data-ouvrir-viewer]").forEach((button) => {
   backButton.after(status);
 
   function resetCamera() {
+    if (typeof viewer.jumpCameraToGoal !== "function") return;
     viewer.cameraOrbit = "0deg 60deg 120%";
     if (viewer.loaded) viewer.jumpCameraToGoal();
   }
@@ -52,4 +53,5 @@ document.querySelectorAll("[data-ouvrir-viewer]").forEach((button) => {
     button.hidden = false;
     button.focus({preventScroll:true});
   });
+  button.disabled = false;
 });
