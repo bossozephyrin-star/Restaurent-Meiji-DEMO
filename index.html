@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Meiji Sushi & Grill, restaurant japonais à Brazzaville. Découvrez notre menu." />
+    <meta name="description" content="Un Noël à savourer chez Meiji. Découvrez notre démo festive, sa carte et ses plats en 3D." />
     <meta name="robots" content="noindex, nofollow" />
     <title>
-      Accueil | Meiji Sushi &amp; Grill
+      Noël chez Meiji | Sushi &amp; Grill
     </title>
     <link rel="stylesheet" href="./css/style.css" />
       <link rel="stylesheet" href="./css/refinements.css">
     <script type="module" src="./assets/js/site.js"></script>
     <script type="module" src="./assets/js/hero-video.js"></script>
+    <link rel="stylesheet" href="./css/theme-noel.css?v=2">
+    <script type="module" src="./assets/js/theme-noel.js?v=2"></script>
   </head>
   <body>
     <header class="site-header">
@@ -21,7 +23,7 @@
       </nav>
     </header>
     <main>
-      <section class="hero" id="accueil" aria-labelledby="hero-title" data-hero-video data-video-state="poster">
+      <section class="hero hero--noel" id="accueil" aria-labelledby="hero-title" data-hero-video data-video-state="poster">
         <video
           id="hero-video"
           class="hero__video"
@@ -41,25 +43,31 @@
         <div class="hero__shade" aria-hidden="true">
         </div>
         <div class="hero__content">
-          <p class="hero__eyebrow" lang="en">
-            Japanese Food &amp; Sushi Bar
-          </p>
-          <h1 id="hero-title">
-            <img src="./assets/img/meiji-wordmark.png" alt="Meiji" />
-          </h1>
-          <p class="hero__subtitle">
-            Sushi &amp; Grill
-          </p>
+          <p class="hero__eyebrow"><svg class="noel-star" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="m16 2 3.5 10.5L30 16l-10.5 3.5L16 30l-3.5-10.5L2 16l10.5-3.5Z" stroke="currentColor"/><path d="m16 9 1.7 5.3L23 16l-5.3 1.7L16 23l-1.7-5.3L9 16l5.3-1.7Z" fill="currentColor"/></svg> Les fêtes chez Meiji</p>
+          <h1 id="hero-title"><span>Un Noël</span><em>à savourer.</em></h1>
+          <p class="hero__subtitle">Des saveurs japonaises, des lumières douces.<br>Et le plaisir d’être ensemble.</p>
           <div class="hero__actions">
-            <a class="hero__button hero__button--primary" href="./menu.html">Découvrir notre menu</a><a class="hero__button hero__button--secondary" href="#contact">Nous trouver</a>
+            <a class="hero__button hero__button--primary" href="./menu.html">Découvrir notre menu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
+            <a class="hero__button hero__button--secondary" href="#contact">Nous trouver</a>
           </div>
+          <p class="noel-signature">Sushi &amp; Grill <span aria-hidden="true">·</span> Brazzaville</p>
         </div>
+        <figure class="noel-window">
+          <div class="noel-window__photo"><img src="./assets/img/plats/tokyo-special.jpeg" alt="Roll Tokyo au saumon et au surimi, garni de tobiko" width="720" height="1080" fetchpriority="high"></div>
+          <div class="noel-seal" aria-hidden="true"><svg class="noel-star" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="m16 2 3.5 10.5L30 16l-10.5 3.5L16 30l-3.5-10.5L2 16l10.5-3.5Z" stroke="currentColor"/><path d="m16 9 1.7 5.3L23 16l-5.3 1.7L16 23l-1.7-5.3L9 16l5.3-1.7Z" fill="currentColor"/></svg><span>Joyeuses</span><strong>fêtes</strong></div>
+          <figcaption class="noel-window__caption">Roll Tokyo</figcaption>
+        </figure>
         <button class="hero__video-control" type="button" data-video-control aria-controls="hero-video" aria-label="Lire la vidéo" hidden>
           <svg class="hero__video-play" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z" fill="currentColor" /></svg>
           <svg class="hero__video-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zm6 0h4v14h-4z" fill="currentColor" /></svg>
           <span data-video-label>Lire la vidéo</span>
         </button>
         <p class="visually-hidden" data-video-status role="status"></p>
+      </section>
+      <section class="noel-invitation" aria-labelledby="invitation-title">
+        <span class="noel-invitation__label">À table, ensemble</span>
+        <div><h2 id="invitation-title">Les belles fêtes<br>se <em>partagent.</em></h2><p>Vos plats préférés, un verre à la main.<br>Retrouvez le goût de Meiji pour les fêtes.</p></div>
+        <a class="noel-invitation__link" href="./boissons.html">Choisir une boisson <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
       </section>
     </main>
     <footer class="site-footer" id="contact">

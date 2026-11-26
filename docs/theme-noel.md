@@ -4,7 +4,21 @@ Branche de travail : `theme-noel`. Base classique : `master`, commit `c8d3fe3`.
 Vérifier `git branch` et `git status` avant chaque session. Aucune fusion dans
 `master` avant validation et paiement du chef.
 
-## Activer ou retirer
+## Refonte de Noël
+
+L'accueil et les bannières du menu utilisent la nouvelle palette, les branches de
+sapin et les boules suspendues. `css/theme-noel.css` est chargé directement après
+les styles communs. `assets/js/theme-noel.js` dessine la neige dans ces bannières.
+Il suspend les effets hors écran et quand le navigateur réduit les animations.
+Le bouton de pause mémorise le choix sur l'appareil. La photo du roll Tokyo et
+la vidéo de sushi proviennent des fichiers déjà utilisés par la démo.
+
+La démo classique et la démo Noël ont chacune leur branche et leur lien GitHub
+Pages. Le nouvel accueil est propre à la branche `theme-noel`.
+
+## Première version, conservée pour référence
+
+### Activer ou retirer
 
 La première ligne de `css/refinements.css` active le thème sur les pages du site :
 

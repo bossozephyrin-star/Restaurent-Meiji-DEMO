@@ -1,141 +1,202 @@
-/* Meiji, fêtes de fin d'année. Activation : première ligne de refinements.css. */
-/* Variante latine locale, mêmes graisses et mêmes caractères français. Licence OFL. */
-@font-face {
-  font-family: "Roboto";
-  src: url("../assets/fonts/Roboto-latin-Variable.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-}
-
+/* Noël chez Meiji. Tous les décors restent locaux et légers. */
+@font-face { font-family: "Roboto"; src: url("../assets/fonts/Roboto-latin-Variable.woff2") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
 :root {
-  --ink: #200a0b;
-  --burgundy: #5b1213;
-  --forest: #171e14;
-  --forest-deep: #5b1213;
-  --forest-night: #171e14;
-  --cream: #f6e8dc;
-  --paper: #fffaf4;
-  --sand: #eadbc7;
-  --rose: #eadbc7;
-  --muted: #6f554e;
-  --copper: #805c22;
-  --garnet: #5b1213;
-  --moss: #171e14;
-  --plum: #5b1213;
-  --black-forest: #0c0f0a;
-  --line: #b6a180;
-  --focus: #805c22;
-  --noel-gold: #c8a45d;
-  /* Même sur une image blanche : crème > 6:1 et focus doré > 3:1. */
-  --noel-photo-veil: rgb(23 30 20 / 76%);
-  --noel-ornament: url("../assets/img/noel-ornement.svg");
+  --theme-noel: 1; --ink: #233b32; --burgundy: #791e32; --forest: #173d31;
+  --forest-deep: #0c241e; --forest-night: #0c241e; --cream: #f4eddf; --paper: #fffcf5;
+  --sand: #e9dfca; --rose: #e9dfca; --muted: #665e50; --copper: #86632d;
+  --garnet: #791e32; --moss: #173d31; --plum: #791e32; --black-forest: #081b16;
+  --line: #cec0a7; --focus: #86632d; --noel-gold: #e7c986; --noel-glow: #ffe8b0;
 }
+body { background: var(--cream); }
+.site-header { position: relative; z-index: 30; min-height: 6.5rem; padding: 1.1rem max(1.5rem, calc((100% - 78rem) / 2)); border-bottom: 1px solid rgb(231 201 134 / 22%); background: var(--forest-night); }
+.site-header, .hero, .menu-banner, .page-heading, .site-footer, .editorial-panel { --focus: var(--noel-gold); --copper: var(--noel-gold); }
+.site-logo { width: 10rem; }
+.site-logo img { max-height: 3.8rem; }
+.site-nav { gap: clamp(1.5rem, 4vw, 3.6rem); }
+.site-nav a { color: var(--cream); font-weight: 500; letter-spacing: .14em; }
+.site-nav a:hover { color: var(--noel-gold); }
+.site-header a:focus-visible, .hero a:focus-visible, .hero button:focus-visible, .site-footer a:focus-visible, .site-footer button:focus-visible { outline-color: var(--noel-gold); }
 
-/* Deux couleurs de focus selon la surface, y compris les onglets sélectionnés. */
-.site-header,
-.hero,
-.site-footer,
-.menu-banner,
-.page-heading,
-.editorial-panel {
-  --focus: var(--noel-gold);
-  --copper: var(--noel-gold);
+/* Une composition éditoriale, devant la vidéo de sushi existante. */
+.hero.hero--noel { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); align-items: center; min-height: min(58rem, max(45rem, calc(100svh - 6.5rem))); padding: 5.5rem max(2rem, calc((100% - 78rem) / 2)) 6.5rem; background: #0c241e url("../assets/img/hero-nigiri-poster.jpg") center / cover; text-align: left; }
+.hero--noel[data-video-state="playing"] .hero__video { opacity: .35; }
+.hero--noel .hero__shade { background: linear-gradient(90deg, rgb(8 27 22 / 94%), rgb(8 27 22 / 73%) 58%, rgb(8 27 22 / 80%)), linear-gradient(0deg, #0c241e, transparent 45%); }
+.hero--noel::after { position: absolute; z-index: 0; inset: 0; content: ""; pointer-events: none; background: radial-gradient(ellipse at 80% 35%, rgb(231 201 134 / 13%), transparent 48%); }
+.hero--noel .hero__content { z-index: 4; width: 100%; padding: 0 0 1rem; text-shadow: none; }
+.hero--noel .hero__eyebrow { display: flex; align-items: center; gap: .8rem; margin: 0 0 1.8rem; padding: 0; border: 0; color: var(--noel-gold); font-size: .67rem; font-weight: 500; letter-spacing: .23em; }
+.noel-star { flex: 0 0 auto; width: 1.3rem; height: 1.3rem; }
+.hero--noel h1 { color: var(--paper); font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(4.2rem, 7.7vw, 8rem); font-weight: 400; line-height: .96; letter-spacing: -.055em; }
+.hero--noel h1 span { display: block; }
+.hero--noel h1 em { display: block; margin-top: .05em; color: var(--noel-gold); font-weight: 400; font-style: italic; }
+.hero--noel .hero__subtitle { max-width: 25rem; margin: 1.8rem 0 0; color: #e1ddcf; font-family: "Roboto", Arial, sans-serif; font-size: .95rem; font-weight: 300; line-height: 1.85; letter-spacing: .015em; text-transform: none; }
+.hero--noel .hero__actions { justify-content: flex-start; align-items: center; gap: 1.7rem; margin: 2.1rem 0 0; }
+.hero--noel .hero__button { gap: 1.1rem; min-height: 3.65rem; padding: 1rem 1.5rem; border-radius: 1rem; font-size: .77rem; font-weight: 500; letter-spacing: .025em; text-transform: none; transition: background .2s, transform .2s, box-shadow .2s; }
+.hero--noel .hero__button--primary { border: 1px solid #d0a461; color: var(--paper); background: var(--burgundy); box-shadow: 0 6px 28px rgb(0 0 0 / 20%); }
+.hero--noel .hero__button--primary:hover { background: #943047; box-shadow: 0 8px 30px rgb(211 149 84 / 15%); transform: translateY(-2px); }
+.hero--noel .hero__button--secondary { min-height: 2.75rem; padding: .5rem 0; border: 0; border-radius: 0; color: var(--cream); background: none; text-decoration: underline; text-underline-offset: .5em; text-decoration-color: rgb(231 201 134 / 45%); }
+.hero__button svg { width: 1.1rem; height: 1.1rem; }
+.noel-signature { display: flex; align-items: center; gap: .7rem; margin-top: 2.3rem; color: #b9c6b9; font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; }
+.noel-signature::before { content: ""; width: 1.5rem; height: 1px; background: #8e9e87; }
+
+/* La photo réelle s'installe dans une fenêtre arrondie. */
+.noel-window { position: relative; z-index: 2; justify-self: end; width: min(31rem, 100%); margin: 0; padding: 1rem; border: 1px solid rgb(231 201 134 / 48%); border-radius: 48% 48% 2rem 2rem; background: rgb(255 248 220 / 3%); box-shadow: 0 0 95px rgb(230 179 93 / 8%); }
+.noel-window__photo { position: relative; overflow: hidden; aspect-ratio: .79; border-radius: 48% 48% 1.3rem 1.3rem; }
+.noel-window__photo::after { position: absolute; inset: 0; content: ""; background: linear-gradient(0deg, rgb(5 25 18 / 95%), transparent 45%); }
+.noel-window__photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 48% 45%; }
+.noel-window__caption { position: absolute; z-index: 1; bottom: 2.5rem; left: 2.5rem; color: var(--paper); font: 400 2.4rem/1.1 "Cormorant Garamond", Georgia, serif; }
+.noel-seal { position: absolute; z-index: 5; right: -1.5rem; bottom: -1.4rem; display: grid; place-content: center; width: 7.5rem; height: 7.5rem; gap: .1rem; border: 1px solid var(--noel-gold); outline: 6px solid var(--burgundy); border-radius: 50%; color: var(--noel-gold); background: var(--burgundy); text-align: center; transform: rotate(9deg); }
+.noel-seal svg { width: 1.25rem; height: 1.25rem; margin: 0 auto .3rem; }
+.noel-seal span { font-size: .55rem; letter-spacing: .14em; text-transform: uppercase; }
+.noel-seal strong { font: italic 400 1.8rem/1 "Cormorant Garamond", Georgia, serif; }
+
+/* Branches SVG, boules en CSS et guirlande lumineuse. */
+.noel-decor { position: absolute; z-index: 3; inset: 0; overflow: hidden; pointer-events: none; }
+.noel-decor__pine { position: absolute; top: -1.8rem; left: -2rem; width: clamp(15rem, 34vw, 38rem); height: 14rem; opacity: .9; background: url("../assets/img/noel-sapin.svg") top left / contain no-repeat; }
+.noel-decor__pine--right { left: auto; right: -2rem; transform: scaleX(-1); }
+.noel-bauble { --ball-size: 5.5rem; --drop: 5rem; position: absolute; top: 0; right: 6%; width: var(--ball-size); height: calc(var(--drop) + var(--ball-size)); transform-origin: top center; animation: noel-sway 8s ease-in-out infinite alternate; }
+.noel-bauble::before { position: absolute; top: 0; left: 50%; width: 1px; height: var(--drop); background: #b99d65; content: ""; }
+.noel-bauble i { position: absolute; top: var(--drop); display: block; width: var(--ball-size); height: var(--ball-size); border: 1px solid rgb(247 220 167 / 30%); border-radius: 50%; background: radial-gradient(circle at 29% 23%, #ffbdab 0%, #c44951 12%, #8d2037 36%, #420d20 77%, #b46450 100%); box-shadow: inset -10px -8px 18px rgb(0 0 0 / 26%), 0 12px 30px rgb(0 0 0 / 28%); }
+.noel-bauble i::before { position: absolute; top: -.37rem; left: 41%; width: 18%; height: .45rem; border-radius: 2px 2px 0 0; background: linear-gradient(90deg, #ad8546, #f7e3b2, #a0793d); content: ""; }
+.noel-bauble i::after { position: absolute; inset: 14%; border: 1px solid rgb(245 215 160 / 48%); border-radius: 50%; transform: rotate(-28deg) scaleX(.48); content: ""; }
+.noel-bauble--gold { --ball-size: 3.3rem; --drop: 2rem; right: 15%; animation-delay: -3s; animation-duration: 10s; }
+.noel-bauble--gold i { background: radial-gradient(circle at 30% 22%, #fff4ce, #ddbb6e 20%, #a67d3f 54%, #604320 85%, #e4c58c); }
+.noel-bauble--small { --ball-size: 2.3rem; --drop: 7.5rem; right: 2%; animation-delay: -5s; animation-duration: 9s; }
+.noel-lights { position: absolute; top: .5rem; inset-inline: 3%; height: 6rem; border-bottom: 1px solid rgb(211 183 117 / 28%); border-radius: 0 0 50% 50%; }
+.noel-lights i { position: absolute; width: .28rem; height: .4rem; border-radius: 50%; background: #ffe8b0; box-shadow: 0 0 7px 2px #ffce76, 0 0 24px 5px rgb(255 198 111 / 24%); animation: noel-glimmer 3.5s ease-in-out infinite alternate; }
+.noel-lights i:nth-child(1) { left: 5%; top: 39%; }
+.noel-lights i:nth-child(2) { left: 16%; top: 71%; animation-delay: -2s; }
+.noel-lights i:nth-child(3) { left: 29%; top: 90%; animation-delay: -.6s; }
+.noel-lights i:nth-child(4) { left: 43%; top: 98%; animation-delay: -1.6s; }
+.noel-lights i:nth-child(5) { left: 57%; top: 98%; animation-delay: -2.5s; }
+.noel-lights i:nth-child(6) { left: 71%; top: 90%; animation-delay: -1s; }
+.noel-lights i:nth-child(7) { left: 84%; top: 71%; animation-delay: -3s; }
+.noel-lights i:nth-child(8) { left: 95%; top: 39%; animation-delay: -1.2s; }
+.noel-snow { position: absolute; z-index: 3; inset: 0; width: 100%; height: 100%; pointer-events: none; opacity: .85; }
+.noel-effects-control { position: absolute; z-index: 6; bottom: 1.4rem; left: max(1.5rem, calc((100% - 78rem) / 2)); display: inline-flex; align-items: center; gap: .55rem; min-height: 2.75rem; padding: .55rem .8rem; border: 1px solid rgb(231 201 134 / 35%); border-radius: .8rem; color: var(--cream); background: #0c241e; font-size: .66rem; cursor: pointer; }
+.noel-effects-control svg { width: 1rem; height: 1rem; color: var(--noel-gold); }
+.noel-effects-control:focus-visible { outline-color: var(--noel-gold); }
+.noel-effects-control:disabled { cursor: default; }
+.hero--noel .hero__video-control { z-index: 6; right: max(1.5rem, calc((100% - 78rem) / 2)); bottom: 1.4rem; border-color: rgb(231 201 134 / 35%); font-size: .66rem; }
+.noel-motion-off .noel-bauble, .noel-motion-off .noel-lights i { animation-play-state: paused; }
+@keyframes noel-sway { from { transform: rotate(-3deg); } to { transform: rotate(3deg); } }
+@keyframes noel-glimmer { from { opacity: .4; } to { opacity: 1; } }
+
+/* Un court interlude ; le menu conserve sa propre page. */
+.noel-invitation { position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr 1.6fr 1fr; align-items: center; gap: 2rem; padding: 4.5rem max(2rem, calc((100% - 78rem) / 2)); color: var(--forest); background: var(--cream); }
+.noel-invitation__label { color: var(--garnet); font-size: .65rem; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
+.noel-invitation h2 { font-size: clamp(2.4rem, 4vw, 3.7rem); line-height: 1.05; letter-spacing: -.025em; }
+.noel-invitation h2 em { color: var(--garnet); font-weight: 400; }
+.noel-invitation p { margin-top: .9rem; color: var(--muted); font-size: .85rem; line-height: 1.8; }
+.noel-invitation__link { display: flex; justify-self: end; align-items: center; gap: 1rem; min-height: 3rem; color: var(--forest); font-size: .8rem; text-underline-offset: .4em; }
+.noel-invitation__link svg { width: 1.2rem; height: 1.2rem; }
+
+/* La même matière et la même palette sur le reste de la démo. */
+.menu-home, .page-shell { padding-top: 1.4rem; }
+.menu-banner, .page-heading { border: 1px solid #a18d59; border-radius: 2rem; background: var(--forest-deep); min-height: 21rem; padding-block: 4.8rem 4.2rem; }
+.menu-banner::after, .page-heading::after { background: linear-gradient(100deg, rgb(8 27 22 / 96%), rgb(8 27 22 / 79%)); }
+.menu-banner > :not(.noel-decor):not(.noel-snow):not(.noel-effects-control), .page-heading > :not(.noel-decor):not(.noel-snow):not(.noel-effects-control) { position: relative; z-index: 4; }
+.menu-banner .noel-decor__pine, .page-heading .noel-decor__pine { width: 18rem; height: 9rem; opacity: .55; }
+.menu-banner .noel-decor__pine:not(.noel-decor__pine--right), .page-heading .noel-decor__pine:not(.noel-decor__pine--right) { display: none; }
+.menu-banner .noel-lights, .page-heading .noel-lights { height: 3rem; opacity: .65; }
+.menu-banner .noel-bauble, .page-heading .noel-bauble { --drop: 2.5rem; --ball-size: 3rem; right: 6%; }
+.menu-banner .noel-bauble--gold, .page-heading .noel-bauble--gold { --drop: .5rem; --ball-size: 2rem; right: 16%; }
+.menu-banner .noel-bauble--small, .page-heading .noel-bauble--small { display: none; }
+.menu-banner .noel-effects-control, .page-heading .noel-effects-control { left: auto; right: 1.1rem; bottom: .8rem; min-height: 2.5rem; }
+.menu-banner .eyebrow, .page-heading .eyebrow { color: var(--noel-gold); }
+.category-nav { background: var(--paper); border-color: var(--line); box-shadow: none; }
+.subcat-nav { background: var(--cream); }
+.subcat-nav button { border-radius: .9rem; }
+.subcat-nav button[aria-selected="true"], .layout-switch button[aria-pressed="true"] { --focus: var(--noel-gold); background: var(--garnet); border-color: var(--garnet); color: var(--paper); }
+.price { background: var(--burgundy); color: var(--paper); border-radius: .65rem; }
+.dish-card { border: 1px solid rgb(134 99 45 / 20%); border-radius: 1.6rem; box-shadow: 0 12px 35px rgb(34 46 32 / 7%); }
+.dish-card__copy { padding: 1.25rem; }
+.dish-preview > span { border-radius: .8rem; background: var(--paper); box-shadow: 0 3px 20px rgb(0 0 0 / 12%); }
+.category-card { border: 1px solid rgb(134 99 45 / 35%); border-radius: 1.6rem; min-height: 24rem; }
+.category-card__shade { background: linear-gradient(0deg, rgb(8 27 22 / 96%), rgb(8 27 22 / 4%) 90%); }
+.category-card__content { padding: 1.7rem; }
+.category-card__content strong { margin-block: .6rem; font-size: 3rem; }
+.category-card__index { color: var(--noel-gold); }
+.category-card--avis { background: radial-gradient(circle at 80% 15%, rgb(231 201 134 / 16%), transparent 55%), var(--burgundy); }
+.category-card--avis::before { position: absolute; right: 1.5rem; top: 2rem; width: 5.5rem; height: 5.5rem; content: ""; background: url("../assets/img/noel-etoile.svg") center / contain no-repeat; opacity: .6; }
+.site-footer { position: relative; margin-top: 0; padding: 4.5rem 1.5rem 2rem; overflow: hidden; border-top: 1px solid rgb(231 201 134 / 25%); border-radius: 2.5rem 2.5rem 0 0; color: var(--cream); background: radial-gradient(ellipse at 50% 0, #1b4031, transparent 70%), var(--forest-night); }
+.site-footer::before { display: block; width: 2rem; height: 2rem; margin: 0 auto 1.5rem; content: ""; background: url("../assets/img/noel-etoile.svg") center / contain no-repeat; }
+.site-footer h2 { margin-block: .8rem 1.1rem; color: var(--paper); font: 400 clamp(2.6rem, 5vw, 4rem)/1.1 "Cormorant Garamond", Georgia, serif; letter-spacing: -.02em; }
+.site-footer .contact-eyebrow { color: var(--noel-gold); font-size: .65rem; letter-spacing: .2em; }
+.site-footer address { color: #d3d9cc; font-size: .9rem; }
+.site-footer .contact-phone { font: 400 1.7rem/1.5 "Cormorant Garamond", Georgia, serif; }
+.site-footer .contact-button { border-radius: .9rem; font-size: .8rem; }
+.site-footer__notice { padding-top: 1.8rem; border-top: 1px solid rgb(231 201 134 / 15%); font-size: .67rem; }
+
+@media (min-width: 90rem) { .hero--noel .hero__content { padding-right: 2.5rem; } }
+@media (min-width: 64rem) and (max-height: 52rem) {
+  .hero.hero--noel { min-height: calc(100svh - 6.5rem); padding-block: 4rem 4.5rem; }
+  .hero--noel h1 { font-size: clamp(4.2rem, 13svh, 7rem); }
+  .noel-window { justify-self: center; width: min(100%, max(19rem, calc((100svh - 15.5rem) * .79))); }
 }
-
-.hero a:focus-visible,
-.hero__video-control:focus-visible,
-.site-header a:focus-visible,
-.site-footer a:focus-visible {
-  outline-color: var(--focus);
+@media (max-width: 63.99rem) {
+  .hero.hero--noel { gap: 2rem; padding-inline: 2rem; }
+  .hero--noel h1 { font-size: clamp(4rem, 8.4vw, 6rem); }
+  .noel-window { padding: .7rem; }
+  .noel-window__caption { left: 1.7rem; bottom: 2rem; font-size: 2rem; }
+  .noel-seal { right: -.7rem; width: 5.7rem; height: 5.7rem; }
+  .noel-seal strong { font-size: 1.4rem; }
+  .noel-invitation { grid-template-columns: 1fr 2fr; }
+  .noel-invitation__link { grid-column: 2; justify-self: start; }
 }
-
-.subcat-nav button[aria-selected="true"] {
-  --focus: var(--noel-gold);
+@media (max-width: 43.99rem) {
+  .site-header { min-height: 5rem; padding: .8rem 1.2rem; flex-direction: row; justify-content: space-between; gap: 1rem; }
+  .site-logo { width: 7rem; flex: 0 0 7rem; }
+  .site-logo img { max-height: 2.5rem; }
+  .site-nav { width: auto; gap: 1.15rem; }
+  .site-nav a { font-size: .58rem; letter-spacing: .06em; }
+  .site-nav a:first-child { display: none; }
+  .hero.hero--noel { grid-template-columns: 1fr; gap: 0; min-height: 0; padding: 7rem 1.4rem 5rem; text-align: center; }
+  .hero--noel .hero__content { padding: 0; }
+  .hero--noel .hero__eyebrow { justify-content: center; gap: .6rem; margin-bottom: 1.3rem; font-size: .58rem; letter-spacing: .19em; }
+  .hero--noel h1 { font-size: clamp(3.7rem, 16vw, 6.5rem); line-height: .96; }
+  .hero--noel .hero__subtitle { max-width: 19rem; margin: 1.3rem auto 0; font-size: .83rem; }
+  .hero--noel .hero__actions { flex-direction: column; gap: .8rem; width: min(24rem, 100%); margin: 1.65rem auto 0; align-items: stretch; }
+  .hero--noel .hero__button { min-height: 3.55rem; font-size: .82rem; }
+  .hero--noel .hero__button--secondary { min-height: 2.75rem; font-size: .75rem; }
+  .noel-signature { display: none; }
+  .noel-window { width: min(23rem, 88%); margin: 2.5rem auto .5rem; padding: .6rem; justify-self: center; border-radius: 48% 48% 1.5rem 1.5rem; }
+  .noel-window__photo { aspect-ratio: 1.1; }
+  .noel-window__caption { bottom: 1.6rem; left: 1.6rem; text-align: left; }
+  .noel-seal { width: 5.7rem; height: 5.7rem; bottom: -.5rem; right: -1rem; }
+  .noel-decor__pine { top: -1.1rem; left: -3.5rem; width: 16rem; height: 8rem; }
+  .noel-decor__pine--right { left: auto; right: -3.5rem; }
+  .noel-bauble { --ball-size: 2.9rem; --drop: 2.1rem; right: 6%; }
+  .noel-bauble--gold { --ball-size: 2rem; --drop: .1rem; right: 23%; }
+  .noel-bauble--small { --ball-size: 1.5rem; --drop: 3.6rem; right: 2%; }
+  .noel-lights { inset-inline: 4%; top: -.5rem; height: 4rem; }
+  .noel-effects-control { bottom: 1rem; left: 1.4rem; }
+  .hero--noel .hero__video-control { bottom: 1rem; right: 1.4rem; }
+  .noel-invitation { grid-template-columns: 1fr; gap: 1.4rem; padding: 3rem 1.5rem; text-align: center; }
+  .noel-invitation h2 { font-size: 2.8rem; }
+  .noel-invitation p { max-width: 22rem; margin-inline: auto; }
+  .noel-invitation__link { grid-column: auto; justify-self: center; }
+  .menu-banner, .page-heading { min-height: 20rem; border-radius: 1.5rem; padding: 5rem 1.5rem 4rem; }
+  .menu-banner h1, .page-heading h1 { font-size: 3.7rem; }
+  .menu-banner > p:not(.eyebrow), .page-heading > p:not(.eyebrow) { font-size: .85rem; }
+  .menu-banner .noel-bauble, .page-heading .noel-bauble { --ball-size: 2.2rem; --drop: 1rem; }
+  .menu-banner .noel-bauble--gold, .page-heading .noel-bauble--gold { --ball-size: 1.5rem; --drop: .2rem; right: 20%; }
+  .category-card { min-height: 21rem; }
+  .site-footer { border-radius: 2rem 2rem 0 0; padding-top: 3rem; }
 }
-
-/* Les composants conservent leurs règles ; seules leurs couleurs changent. */
-.price,
-.subcat-nav,
-.layout-switch {
-  --forest: var(--burgundy);
+@media (max-width: 23rem) {
+  .site-header { padding-inline: 1rem; }
+  .hero.hero--noel { padding-inline: 1rem; }
+  .hero--noel h1 { font-size: 3.55rem; }
+  .hero--noel .hero__eyebrow { font-size: .52rem; }
+  .noel-seal { width: 4.8rem; height: 4.8rem; }
+  .noel-seal svg { width: .9rem; height: .9rem; }
+  .noel-seal strong { font-size: 1.25rem; }
+  .noel-seal span { font-size: .45rem; }
 }
-
-.hero .hero__button--primary {
-  --cream: var(--burgundy);
-  --ink: var(--paper);
-  border-color: var(--noel-gold);
-  border-width: 2px;
-}
-
-.site-header {
-  border-bottom-color: var(--noel-gold);
-}
-
-.hero .hero__shade,
-.menu-banner::after,
-.page-heading::after,
-.category-card__shade {
-  background: var(--noel-photo-veil);
-}
-
-/* Décor de fond uniquement : aucune information, aucun élément HTML ajouté. */
-.hero::before,
-.hero::after {
-  position: absolute;
-  z-index: 1;
-  top: .75rem;
-  width: clamp(5.5rem, 17vw, 13rem);
-  aspect-ratio: 200 / 250;
-  content: "";
-  background: var(--noel-ornament) center / contain no-repeat;
-  pointer-events: none;
-  transform: scaleX(var(--noel-side, 1));
-  animation: noel-arrivee 3s ease-out both;
-}
-
-.hero::before {
-  left: clamp(.5rem, 2vw, 2rem);
-}
-
-.hero .hero__content {
-  z-index: 2;
-}
-
-.hero::after {
-  --noel-side: -1;
-  right: clamp(.5rem, 2vw, 2rem);
-}
-
-@keyframes noel-arrivee {
-  from {
-    opacity: 0;
-    transform: translateY(-.6rem) scaleX(var(--noel-side, 1));
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scaleX(var(--noel-side, 1));
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .hero::before,
-  .hero::after {
-    animation: none;
-  }
+  .noel-bauble, .noel-lights i { animation: none; }
+  .noel-snow { display: none; }
+  .hero--noel .hero__button { transition: none; }
+  .hero--noel .hero__button--primary:hover { transform: none; }
 }
-
-@media (max-width: 22.5rem) {
-  .hero::before,
-  .hero::after {
-    top: .5rem;
-    width: 3.75rem;
-  }
-}
-
-@media print {
-  .hero::before,
-  .hero::after {
-    display: none;
-  }
-}
+@media print { .noel-snow, .noel-decor, .noel-effects-control { display: none; } }
