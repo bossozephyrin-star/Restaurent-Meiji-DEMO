@@ -76,8 +76,6 @@ d'une image blanche. Ces valeurs ne constituent pas un audit WCAG complet du sit
 - Les dix tests du correctif vidéo passent. Aucune erreur console pendant les
   vérifications du thème et du viewer.
 
-## Avant de présenter la démo
-
 ## Nouvelle vérification du 26 novembre 2026
 
 - Branche vérifiée : `theme-noel`. Dix tests vidéo relancés, tous réussis.
@@ -107,7 +105,21 @@ Le test sur un vrai téléphone et un réseau mobile reste à effectuer : accuei
 vidéo avec et sans économie d'énergie, menu, 3D, réduction des animations et zoom
 du texte. Aucun appareil physique n'était accessible pour cette vérification.
 
-La branche ne crée pas un second lien public à elle seule. Prévoir un déploiement
-distinct de `theme-noel` pour la démo Noël, par exemple un déploiement de branche
-Netlify, tout en conservant la démo classique. Aucun déploiement ni fusion n'a été
-effectué pendant la création du thème.
+## Publication séparée du 26 novembre 2026
+
+Avec l'accord de l'utilisateur, la démo Noël est publiée dans le dépôt public
+`bossozephyrin-star/Meiji-Demo-Noel`, sur GitHub Pages depuis `main` à la racine.
+Le commit de publication est `b16669e7649a1c23b941260a7243518512d45c9f`.
+Il contient un export des fichiers du site depuis `theme-noel` au commit
+`0cda124fa91355766b1be5126617ecb830d51b75`, avec les licences, un README et
+`.nojekyll`. Les fichiers de travail et la configuration du backend sont exclus.
+
+- Noël : https://bossozephyrin-star.github.io/Meiji-Demo-Noel/
+- Classique : https://bossozephyrin-star.github.io/Restaurent-Meiji-DEMO/
+
+Le déploiement GitHub Pages est terminé. Les deux adresses répondent HTTP 200 ;
+seule la démo Noël importe `theme-noel.css`. À la nouvelle adresse, l'accueil,
+la lecture vidéo, le lien vers le menu et l'ouverture du roll Tokyo en 3D ont été
+contrôlés dans le navigateur à 390 px, sans débordement horizontal ni erreur
+console observée. La balise `noindex, nofollow` et la mention « Démo non officielle »
+sont présentes. Aucune fusion ni publication sur `master` n'a été effectuée.
