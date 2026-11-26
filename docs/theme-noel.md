@@ -8,8 +8,9 @@ Vérifier `git branch` et `git status` avant chaque session. Aucune fusion dans
 
 L'accueil et les bannières du menu utilisent la nouvelle palette, les branches de
 sapin et les boules suspendues. `css/theme-noel.css` est chargé directement après
-les styles communs. `assets/js/theme-noel.js` dessine la neige dans ces bannières.
-Il suspend les effets hors écran et quand le navigateur réduit les animations.
+les styles communs. `assets/js/theme-noel.js` dessine la neige derrière la page
+et dans le décor des bannières, de l'en-tête et du pied de page. Les cartes opaques
+laissent la neige derrière leur contenu. Les décors hors écran sont suspendus.
 Le bouton de pause mémorise le choix sur l'appareil. La photo du roll Tokyo et
 la vidéo de sushi proviennent des fichiers déjà utilisés par la démo.
 

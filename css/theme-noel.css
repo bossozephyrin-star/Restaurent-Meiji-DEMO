@@ -7,7 +7,12 @@
   --garnet: #791e32; --moss: #173d31; --plum: #791e32; --black-forest: #081b16;
   --line: #cec0a7; --focus: #86632d; --noel-gold: #e7c986; --noel-glow: #ffe8b0;
 }
-body { background: var(--cream); }
+body {
+  isolation: isolate;
+  background: radial-gradient(ellipse at 12% 18%, #cadcd0, transparent 58%),
+    radial-gradient(ellipse at 92% 74%, #c5d8cb, transparent 57%), #e8eee3;
+  background-attachment: fixed;
+}
 .site-header { position: relative; z-index: 30; min-height: 6.5rem; padding: 1.1rem max(1.5rem, calc((100% - 78rem) / 2)); border-bottom: 1px solid rgb(231 201 134 / 22%); background: var(--forest-night); }
 .site-header, .hero, .menu-banner, .page-heading, .site-footer, .editorial-panel { --focus: var(--noel-gold); --copper: var(--noel-gold); }
 .site-logo { width: 10rem; }
@@ -71,18 +76,37 @@ body { background: var(--cream); }
 .noel-lights i:nth-child(6) { left: 71%; top: 90%; animation-delay: -1s; }
 .noel-lights i:nth-child(7) { left: 84%; top: 71%; animation-delay: -3s; }
 .noel-lights i:nth-child(8) { left: 95%; top: 39%; animation-delay: -1.2s; }
-.noel-snow { position: absolute; z-index: 3; inset: 0; width: 100%; height: 100%; pointer-events: none; opacity: .85; }
+.noel-snow {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: .85;
+}
+.noel-snow--backdrop {
+  position: fixed;
+  z-index: -1;
+  opacity: 1;
+}
+.site-header, .site-footer { isolation: isolate; }
+.site-header > .noel-snow, .site-footer > .noel-snow { z-index: -1; }
+.site-header > .noel-snow { opacity: .48; }
 .noel-effects-control { position: absolute; z-index: 6; bottom: 1.4rem; left: max(1.5rem, calc((100% - 78rem) / 2)); display: inline-flex; align-items: center; gap: .55rem; min-height: 2.75rem; padding: .55rem .8rem; border: 1px solid rgb(231 201 134 / 35%); border-radius: .8rem; color: var(--cream); background: #0c241e; font-size: .66rem; cursor: pointer; }
 .noel-effects-control svg { width: 1rem; height: 1rem; color: var(--noel-gold); }
 .noel-effects-control:focus-visible { outline-color: var(--noel-gold); }
 .noel-effects-control:disabled { cursor: default; }
+.site-footer .noel-effects-control {
+  position: static;
+  margin-block: .75rem 0;
+}
 .hero--noel .hero__video-control { z-index: 6; right: max(1.5rem, calc((100% - 78rem) / 2)); bottom: 1.4rem; border-color: rgb(231 201 134 / 35%); font-size: .66rem; }
-.noel-motion-off .noel-bauble, .noel-motion-off .noel-lights i { animation-play-state: paused; }
 @keyframes noel-sway { from { transform: rotate(-3deg); } to { transform: rotate(3deg); } }
 @keyframes noel-glimmer { from { opacity: .4; } to { opacity: 1; } }
 
 /* Un court interlude ; le menu conserve sa propre page. */
-.noel-invitation { position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr 1.6fr 1fr; align-items: center; gap: 2rem; padding: 4.5rem max(2rem, calc((100% - 78rem) / 2)); color: var(--forest); background: var(--cream); }
+.noel-invitation { position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr 1.6fr 1fr; align-items: center; gap: 2rem; padding: 4.5rem max(2rem, calc((100% - 78rem) / 2)); color: var(--forest); }
 .noel-invitation__label { color: var(--garnet); font-size: .65rem; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
 .noel-invitation h2 { font-size: clamp(2.4rem, 4vw, 3.7rem); line-height: 1.05; letter-spacing: -.025em; }
 .noel-invitation h2 em { color: var(--garnet); font-weight: 400; }
